@@ -215,3 +215,6 @@ data/hitters.json
 
 # macOS
 .DS_Store
+
+# Virtual environment
+venv/
