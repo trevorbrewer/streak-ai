@@ -18,7 +18,7 @@
 | Chunk | Description | Status |
 |-------|-------------|--------|
 | 1 | Repo setup & project scaffold | ✅ Done |
-| 2 | Python environment & config | ⬜ |
+| 2 | Python environment & config | ✅ Done |
 | 3 | Hitter data model & storage | ⬜ |
 | 4 | GitHub Actions CI pipeline | ⬜ |
 | 5 | MLB Stats API — season stats | ⬜ |
