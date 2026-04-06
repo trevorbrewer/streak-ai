@@ -19,7 +19,7 @@
 |-------|-------------|--------|
 | 1 | Repo setup & project scaffold | ✅ Done |
 | 2 | Python environment & config | ✅ Done |
-| 3 | Hitter data model & storage | ⬜ |
+| 3 | Hitter data model & storage | ✅ Done |
 | 4 | GitHub Actions CI pipeline | ⬜ |
 | 5 | MLB Stats API — season stats | ⬜ |
 | 6 | Daily schedule & matchup puller | ⬜ |
