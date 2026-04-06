@@ -1,7 +1,7 @@
 # STREAK·AI — Beat the Streak Prediction System
 
 ![CI Tests](https://github.com/trevorbrewer/streak-ai/actions/workflows/ci.yml/badge.svg)
-![Daily Pipeline](https://github.com/YOUR_USERNAME/streak-ai/actions/workflows/daily_picks.yml/badge.svg)
+![Daily Pipeline](https://github.com/trevorbrewer/streak-ai/actions/workflows/daily_picks.yml/badge.svg)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 

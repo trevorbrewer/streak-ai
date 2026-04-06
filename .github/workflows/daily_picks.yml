@@ -1,0 +1,64 @@
+name: Daily Picks Pipeline
+
+on:
+  schedule:
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: 'Send email report?'
+        required: false
+        default: 'true'
+
+jobs:
+  run-picks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run picks pipeline
+        env:
+          ANTHROPIC_API_KEY:   ${{ secrets.ANTHROPIC_API_KEY }}
+          SENDGRID_API_KEY:    ${{ secrets.SENDGRID_API_KEY }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+          EMAIL_FROM:          ${{ secrets.EMAIL_FROM }}
+          EMAIL_RECIPIENTS:    ${{ secrets.EMAIL_RECIPIENTS }}
+          SCORE_THRESHOLD:     ${{ vars.SCORE_THRESHOLD || '65' }}
+          STREAK_MODE:         ${{ vars.STREAK_MODE || 'conservative' }}
+        run: python3 streak_ai.py --run-now
+
+      - name: Commit updated scores to repo
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "STREAK-AI Bot"
+          git add data/scores_history.json data/hitters.json
+          git diff --staged --quiet || git commit -m "data: picks for $(date +'%Y-%m-%d') [skip ci]"
+          git push
+
+      - name: Upload run log as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-log-${{ github.run_id }}
+          path: data/
+          retention-days: 30
