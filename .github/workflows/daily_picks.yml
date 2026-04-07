@@ -5,10 +5,18 @@ on:
     - cron: '0 14 * * *'
   workflow_dispatch:
     inputs:
-      send_email:
-        description: 'Send email report?'
+      dry_run:
+        description: 'Dry run (no save or email)?'
         required: false
-        default: 'true'
+        default: 'false'
+      skip_statcast:
+        description: 'Skip Statcast fetch?'
+        required: false
+        default: 'false'
+      date:
+        description: 'Date to run for (YYYY-MM-DD, blank = today)'
+        required: false
+        default: ''
 
 jobs:
   run-picks:
@@ -43,9 +51,21 @@ jobs:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           EMAIL_FROM:          ${{ secrets.EMAIL_FROM }}
           EMAIL_RECIPIENTS:    ${{ secrets.EMAIL_RECIPIENTS }}
-          SCORE_THRESHOLD:     ${{ vars.SCORE_THRESHOLD || '65' }}
-          STREAK_MODE:         ${{ vars.STREAK_MODE || 'conservative' }}
-        run: python3 streak_ai.py --run-now
+          SCORE_THRESHOLD:     ${{ vars.SCORE_THRESHOLD }}
+          STREAK_MODE:         ${{ vars.STREAK_MODE }}
+        run: |
+          ARGS="--run-now"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          if [ "${{ github.event.inputs.skip_statcast }}" = "true" ]; then
+            ARGS="$ARGS --skip-statcast"
+          fi
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            ARGS="$ARGS --date ${{ github.event.inputs.date }}"
+          fi
+          echo "Running: python3 streak_ai.py $ARGS"
+          python3 streak_ai.py $ARGS
 
       - name: Commit updated scores to repo
         run: |
@@ -55,10 +75,12 @@ jobs:
           git diff --staged --quiet || git commit -m "data: picks for $(date +'%Y-%m-%d') [skip ci]"
           git push || true
 
-      - name: Upload run log as artifact
+      - name: Upload run artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-log-${{ github.run_id }}
-          path: data/
+          name: pipeline-run-${{ github.run_id }}
+          path: |
+            data/scores_history.json
+            data/hitters.json
           retention-days: 30
