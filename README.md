@@ -26,7 +26,7 @@
 | 7 | Statcast & advanced metrics | ✅ Done |
 | 8 | Weather & park factors | ✅ Done |
 | 9 | Feature engineering pipeline | ✅ Done |
-| 10 | Claude AI scoring engine | ⬜ |
+| 10 | Claude AI scoring engine | ✅ Done |
 | 11 | Full pipeline orchestrator | ⬜ |
 | 12 | GitHub Actions daily automation | ⬜ |
 | 13 | Email report module | ⬜ |
