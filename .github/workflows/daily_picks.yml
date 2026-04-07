@@ -51,9 +51,9 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "STREAK-AI Bot"
-          git add data/scores_history.json data/hitters.json
+          git add -A data/ || true
           git diff --staged --quiet || git commit -m "data: picks for $(date +'%Y-%m-%d') [skip ci]"
-          git push
+          git push || true
 
       - name: Upload run log as artifact
         if: always()
