@@ -1,7 +1,7 @@
 # STREAK·AI — Beat the Streak Prediction System
 
-![CI Tests](https://github.com/trevorbrewer/streak-ai/actions/workflows/ci.yml/badge.svg)
-![Daily Pipeline](https://github.com/trevorbrewer/streak-ai/actions/workflows/daily_picks.yml/badge.svg)
+[![CI Tests](https://github.com/trevorbrewer/streak-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/trevorbrewer/streak-ai/actions/workflows/ci.yml)
+[![Daily Pipeline](https://github.com/trevorbrewer/streak-ai/actions/workflows/daily_picks.yml/badge.svg)](https://github.com/trevorbrewer/streak-ai/actions/workflows/daily_picks.yml)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
@@ -28,7 +28,7 @@
 | 9 | Feature engineering pipeline | ✅ Done |
 | 10 | Claude AI scoring engine | ✅ Done |
 | 11 | Full pipeline orchestrator | ✅ Done |
-| 12 | GitHub Actions daily automation | ⬜ |
+| 12 | GitHub Actions daily automation | ✅ Done |
 | 13 | Email report module | ⬜ |
 | 14 | Web dashboard (GitHub Pages) | ⬜ |
 | 15 | README, docs & portfolio polish | ⬜ |
