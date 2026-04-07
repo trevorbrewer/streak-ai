@@ -24,7 +24,7 @@
 | 5 | MLB Stats API — season stats | ✅ Done |
 | 6 | Daily schedule & matchup puller | ✅ Done |
 | 7 | Statcast & advanced metrics | ✅ Done |
-| 8 | Weather & park factors | ⬜ |
+| 8 | Weather & park factors | ✅ Done |
 | 9 | Feature engineering pipeline | ⬜ |
 | 10 | Claude AI scoring engine | ⬜ |
 | 11 | Full pipeline orchestrator | ⬜ |
