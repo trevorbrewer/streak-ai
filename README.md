@@ -25,7 +25,7 @@
 | 6 | Daily schedule & matchup puller | ✅ Done |
 | 7 | Statcast & advanced metrics | ✅ Done |
 | 8 | Weather & park factors | ✅ Done |
-| 9 | Feature engineering pipeline | ⬜ |
+| 9 | Feature engineering pipeline | ✅ Done |
 | 10 | Claude AI scoring engine | ⬜ |
 | 11 | Full pipeline orchestrator | ⬜ |
 | 12 | GitHub Actions daily automation | ⬜ |
