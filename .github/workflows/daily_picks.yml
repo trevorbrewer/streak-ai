@@ -54,21 +54,18 @@ jobs:
           SCORE_THRESHOLD:     ${{ vars.SCORE_THRESHOLD }}
           STREAK_MODE:         ${{ vars.STREAK_MODE }}
         run: |
-          echo "Python version:"
-          python3 --version
-          echo "Working directory:"
-          pwd
-          echo "Files present:"
-          ls -la
-          echo "Data folder:"
-          ls -la data/
-          echo "Testing imports:"
-          python3 -c "from src.config import CONFIG; print('config ok')"
-          python3 -c "from src.models import Hitter; print('models ok')"
-          python3 -c "from src.storage import load_hitters; print('storage ok')"
-          python3 -c "from src.pipeline import run_pipeline; print('pipeline ok')"
-          echo "Running pipeline:"
-          python3 streak_ai.py --run-now --skip-statcast
+          ARGS="--run-now"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          if [ "${{ github.event.inputs.skip_statcast }}" = "true" ]; then
+            ARGS="$ARGS --skip-statcast"
+          fi
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            ARGS="$ARGS --date ${{ github.event.inputs.date }}"
+          fi
+          echo "Running: python3 streak_ai.py $ARGS"
+          python3 streak_ai.py $ARGS
 
       - name: Commit updated scores to repo
         run: |
