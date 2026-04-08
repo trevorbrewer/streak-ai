@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STREAK·AI — Beat the Streak Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap');
+
+  :root {
+    --bg:       #0a0c10;
+    --surface:  #0f1318;
+    --surface2: #151b22;
+    --surface3: #1c2530;
+    --border:   rgba(255,255,255,0.07);
+    --border2:  rgba(255,255,255,0.12);
+    --accent:   #00e5a0;
+    --accent2:  #00b87a;
+    --text:     #e8edf2;
+    --text2:    #8b9ab0;
+    --text3:    #4a5568;
+    --red:      #ff4f4f;
+    --amber:    #f5a623;
+    --blue:     #4da6ff;
+    --mono:     'DM Mono', monospace;
+    --sans:     'Inter', sans-serif;
+    --display:  'Syne', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+  }
+  .logo-sub {
+    font-size: 11px;
+    color: var(--text3);
+    font-family: var(--mono);
+    letter-spacing: 1.5px;
+    margin-top: 3px;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .last-updated {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+  }
+  .gh-link {
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    color: var(--text2);
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .gh-link:hover { color: var(--text); border-color: var(--accent); }
+
+  /* Main layout */
+  .main { max-width: 1100px; margin: 0 auto; padding: 32px; }
+
+  /* Stat cards */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+  .stat-card.green::before  { background: var(--accent); }
+  .stat-card.amber::before  { background: var(--amber); }
+  .stat-card.blue::before   { background: var(--blue); }
+  .stat-card.red::before    { background: var(--red); }
+  .stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text3);
+    font-family: var(--mono);
+    margin-bottom: 8px;
+  }
+  .stat-value {
+    font-family: var(--display);
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .stat-sub {
+    font-size: 11px;
+    color: var(--text2);
+    margin-top: 4px;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 24px;
+  }
+  .card-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card-title {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .card-body { padding: 20px; }
+
+  /* Pick grid */
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .pick-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    transition: border-color 0.15s;
+  }
+  .pick-card:hover { border-color: var(--accent); }
+  .pick-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--mono);
+    margin-right: 6px;
+  }
+  .rank-1 { background: #ffd700; color: #000; }
+  .rank-2 { background: #c0c0c0; color: #000; }
+  .rank-3 { background: #cd7f32; color: #000; }
+  .rank-n { background: var(--surface3); color: var(--text2); }
+  .pick-name {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .pick-meta {
+    font-size: 11px;
+    color: var(--text2);
+    font-family: var(--mono);
+    margin-bottom: 12px;
+  }
+  .pick-score {
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .pick-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .pick-stat {
+    text-align: center;
+    background: var(--surface3);
+    border-radius: 6px;
+    padding: 6px 4px;
+  }
+  .pick-stat-val {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .pick-stat-lbl {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    margin-top: 2px;
+  }
+  .pick-reasoning {
+    font-size: 11px;
+    color: var(--text2);
+    line-height: 1.5;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-family: var(--mono);
+    font-weight: 500;
+  }
+  .badge-high   { background: rgba(0,229,160,0.15); color: var(--accent); }
+  .badge-medium { background: rgba(245,166,35,0.15); color: var(--amber); }
+  .badge-low    { background: rgba(255,79,79,0.15);  color: var(--red); }
+
+  /* History table */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    font-family: var(--mono);
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: middle;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(0,229,160,0.03); }
+
+  /* Score bar */
+  .score-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .score-fill {
+    height: 4px;
+    border-radius: 2px;
+    background: var(--surface3);
+    width: 80px;
+    overflow: hidden;
+  }
+  .score-inner { height: 100%; border-radius: 2px; }
+
+  /* Loading / empty states */
+  .loading {
+    text-align: center;
+    padding: 60px;
+    color: var(--text3);
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .loading-dot {
+    display: inline-block;
+    animation: pulse 1.4s infinite;
+  }
+  .loading-dot:nth-child(2) { animation-delay: 0.2s; }
+  .loading-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes pulse {
+    0%, 80%, 100% { opacity: 0.2; }
+    40% { opacity: 1; }
+  }
+  .empty {
+    text-align: center;
+    padding: 40px;
+    color: var(--text3);
+    font-size: 13px;
+  }
+
+  /* Filter tabs */
+  .tabs {
+    display: flex;
+    gap: 2px;
+    background: var(--surface2);
+    border-radius: 8px;
+    padding: 3px;
+  }
+  .tab {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    color: var(--text2);
+    font-family: var(--mono);
+    transition: all 0.15s;
+    border: none;
+    background: transparent;
+  }
+  .tab.active { background: var(--surface); color: var(--accent); }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px;
+    color: var(--text3);
+    font-size: 11px;
+    font-family: var(--mono);
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+
+  @media (max-width: 900px) {
+    .stat-grid    { grid-template-columns: repeat(2, 1fr); }
+    .picks-grid   { grid-template-columns: repeat(2, 1fr); }
+    .main         { padding: 16px; }
+  }
+  @media (max-width: 600px) {
+    .picks-grid   { grid-template-columns: 1fr; }
+    .stat-grid    { grid-template-columns: repeat(2, 1fr); }
+    .header       { flex-direction: column; gap: 12px; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="logo">STREAK·AI</div>
+    <div class="logo-sub">BEAT THE STREAK — PREDICTION DASHBOARD</div>
+  </div>
+  <div class="header-right">
+    <div class="last-updated" id="last-updated">Loading...</div>
+    <a class="gh-link"
+       href="https://github.com/trevorbrewer/streak-ai"
+       target="_blank">
+      View on GitHub
+    </a>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Stat cards -->
+  <div class="stat-grid">
+    <div class="stat-card green">
+      <div class="stat-label">Top Score Today</div>
+      <div class="stat-value" id="top-score">—</div>
+      <div class="stat-sub" id="top-player">No picks yet</div>
+    </div>
+    <div class="stat-card blue">
+      <div class="stat-label">Hitters Scored</div>
+      <div class="stat-value" id="hitters-scored">—</div>
+      <div class="stat-sub">Today's slate</div>
+    </div>
+    <div class="stat-card amber">
+      <div class="stat-label">Picks Above Threshold</div>
+      <div class="stat-value" id="picks-count">—</div>
+      <div class="stat-sub" id="threshold-label">Score ≥ 65</div>
+    </div>
+    <div class="stat-card red">
+      <div class="stat-label">Pipeline Runs</div>
+      <div class="stat-value" id="total-runs">—</div>
+      <div class="stat-sub">Last 90 days</div>
+    </div>
+  </div>
+
+  <!-- Today's picks -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Today's Picks</span>
+      <div class="tabs">
+        <button class="tab active" onclick="filterPicks('all', this)">All</button>
+        <button class="tab" onclick="filterPicks('high', this)">High</button>
+        <button class="tab" onclick="filterPicks('medium', this)">Medium</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="picks-grid" id="picks-grid">
+        <div class="loading">
+          <span class="loading-dot">·</span>
+          <span class="loading-dot">·</span>
+          <span class="loading-dot">·</span>
+          Loading picks
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent history -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Recent History</span>
+      <span style="font-size:12px; color:var(--text3); font-family:var(--mono);">
+        Last 10 runs
+      </span>
+    </div>
+    <div class="card-body" style="padding:0;">
+      <div style="overflow-x:auto;">
+        <table id="history-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Top Pick</th>
+              <th>Score</th>
+              <th>Picks</th>
+              <th>Avg Score</th>
+            </tr>
+          </thead>
+          <tbody id="history-tbody">
+            <tr>
+              <td colspan="5" class="loading">
+                <span class="loading-dot">·</span>
+                <span class="loading-dot">·</span>
+                <span class="loading-dot">·</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  STREAK·AI · Powered by Claude AI · MLB Stats API · Baseball Savant<br>
+  Not affiliated with ESPN · For research purposes only
+</div>
+
+<script>
+const REPO      = 'trevorbrewer/streak-ai';
+const THRESHOLD = 65;
+let ALL_PICKS   = [];
+
+// ── Fetch scores history from GitHub raw content ──────────────
+async function fetchHistory() {
+  const url = `https://raw.githubusercontent.com/${REPO}/main/data/scores_history.json`;
+  try {
+    const res = await fetch(url + '?t=' + Date.now());
+    if (!res.ok) throw new Error('Not found');
+    return await res.json();
+  } catch (e) {
+    console.warn('Could not load scores_history.json:', e);
+    return [];
+  }
+}
+
+// ── Color helpers ─────────────────────────────────────────────
+function scoreColor(s) {
+  if (s >= 75) return 'var(--accent)';
+  if (s >= 60) return 'var(--amber)';
+  return 'var(--red)';
+}
+
+function rankClass(i) {
+  return ['rank-1','rank-2','rank-3'][i] || 'rank-n';
+}
+
+function badge(confidence) {
+  const c = (confidence || 'medium').toLowerCase();
+  return `<span class="badge badge-${c}">${c.toUpperCase()}</span>`;
+}
+
+// ── Render today's picks ──────────────────────────────────────
+function renderPicks(picks, filter = 'all') {
+  const grid = document.getElementById('picks-grid');
+
+  let filtered = [...picks];
+  if (filter === 'high')   filtered = picks.filter(p => p.confidence === 'high');
+  if (filter === 'medium') filtered = picks.filter(p => p.confidence === 'medium');
+
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="empty" style="grid-column:1/-1;">
+      No picks match this filter.
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map((p, i) => {
+    const score = p.score || 0;
+    const color = scoreColor(score);
+    const rc    = rankClass(i);
+    const reasoning = p.reasoning
+      ? `<div class="pick-reasoning">${p.reasoning.substring(0, 160)}${p.reasoning.length > 160 ? '…' : ''}</div>`
+      : '';
+
+    return `
+    <div class="pick-card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;">
+        <div>
+          <div class="pick-name">
+            <span class="pick-rank ${rc}">${i + 1}</span>${p.name}
+          </div>
+          <div class="pick-meta">
+            ${p.team || '?'} · vs ${p.opp || '?'} · ${p.park || '?'}
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div class="pick-score" style="color:${color};">${score}</div>
+          <div style="font-size:10px;color:var(--text3);font-family:var(--mono);">/100</div>
+        </div>
+      </div>
+      <div style="margin-bottom:8px;">${badge(p.confidence)}</div>
+      <div class="pick-stats">
+        <div class="pick-stat">
+          <div class="pick-stat-val">${p.pitcher ? p.pitcher.split(' ').pop() : '?'}</div>
+          <div class="pick-stat-lbl">Pitcher</div>
+        </div>
+        <div class="pick-stat">
+          <div class="pick-stat-val">${p.era != null ? p.era : '?'}</div>
+          <div class="pick-stat-lbl">ERA</div>
+        </div>
+        <div class="pick-stat">
+          <div class="pick-stat-val">${p.confidence ? p.confidence[0].toUpperCase() : '?'}</div>
+          <div class="pick-stat-lbl">Conf</div>
+        </div>
+      </div>
+      ${p.key_factor ? `<div style="font-size:11px;color:${color};margin-top:8px;font-weight:500;">★ ${p.key_factor}</div>` : ''}
+      ${reasoning}
+    </div>`;
+  }).join('');
+}
+
+// ── Render history table ──────────────────────────────────────
+function renderHistory(history) {
+  const tbody = document.getElementById('history-tbody');
+  const recent = [...history].reverse().slice(0, 10);
+
+  if (!recent.length) {
+    tbody.innerHTML = `<tr><td colspan="5" class="empty">No history yet.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = recent.map(run => {
+    const picks   = run.picks || [];
+    const sorted  = [...picks].sort((a,b) => (b.score||0) - (a.score||0));
+    const top     = sorted[0];
+    const above   = picks.filter(p => (p.score||0) >= THRESHOLD).length;
+    const scores  = picks.map(p => p.score || 0).filter(s => s > 0);
+    const avg     = scores.length
+      ? Math.round(scores.reduce((a,b) => a+b, 0) / scores.length)
+      : '—';
+
+    const topScore  = top ? top.score : '—';
+    const topColor  = top ? scoreColor(top.score) : 'var(--text3)';
+    const dateStr   = run.date || '?';
+
+    return `
+    <tr>
+      <td style="font-family:var(--mono);font-size:12px;">${dateStr}</td>
+      <td>${top ? `<strong>${top.name}</strong> <span style="color:var(--text3);font-size:11px;">(${top.team})</span>` : '—'}</td>
+      <td>
+        <div class="score-bar">
+          <div class="score-fill">
+            <div class="score-inner" style="width:${topScore}%;background:${topColor};"></div>
+          </div>
+          <span style="font-family:var(--mono);font-size:12px;color:${topColor};">${topScore}</span>
+        </div>
+      </td>
+      <td style="font-family:var(--mono);">${above}</td>
+      <td style="font-family:var(--mono);color:var(--text2);">${avg}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── Update stat cards ─────────────────────────────────────────
+function renderStats(history, todayPicks) {
+  const sorted = [...todayPicks].sort((a,b) => (b.score||0) - (a.score||0));
+  const top    = sorted[0];
+  const above  = todayPicks.filter(p => (p.score||0) >= THRESHOLD);
+
+  document.getElementById('top-score').textContent =
+    top ? top.score : '—';
+  document.getElementById('top-player').textContent =
+    top ? top.name : 'No picks yet';
+  document.getElementById('hitters-scored').textContent =
+    todayPicks.length || '—';
+  document.getElementById('picks-count').textContent =
+    above.length || '0';
+  document.getElementById('total-runs').textContent =
+    history.length || '—';
+
+  if (top) {
+    document.getElementById('top-score').style.color = scoreColor(top.score);
+  }
+}
+
+// ── Filter tab handler ────────────────────────────────────────
+function filterPicks(filter, btn) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderPicks(ALL_PICKS, filter);
+}
+
+// ── Main init ─────────────────────────────────────────────────
+async function init() {
+  const history = await fetchHistory();
+
+  if (!history.length) {
+    document.getElementById('picks-grid').innerHTML = `
+      <div class="empty" style="grid-column:1/-1;">
+        No pipeline runs found yet.<br>
+        <span style="font-size:11px;color:var(--text3);">
+          Run the pipeline to see picks here.
+        </span>
+      </div>`;
+    document.getElementById('history-tbody').innerHTML =
+      `<tr><td colspan="5" class="empty">No history yet.</td></tr>`;
+    document.getElementById('last-updated').textContent = 'No data';
+    return;
+  }
+
+  // Get today's picks from the latest run
+  const latest   = history[history.length - 1];
+  const picks    = latest.picks || [];
+  ALL_PICKS      = [...picks].sort((a,b) => (b.score||0) - (a.score||0));
+
+  // Update last updated timestamp
+  const runAt = latest.run_at
+    ? new Date(latest.run_at).toLocaleString('en-US', {
+        month: 'short', day: 'numeric',
+        hour: 'numeric', minute: '2-digit'
+      })
+    : latest.date;
+  document.getElementById('last-updated').textContent =
+    `Last run: ${runAt}`;
+
+  renderStats(history, ALL_PICKS);
+  renderPicks(ALL_PICKS, 'all');
+  renderHistory(history);
+}
+
+init();
+</script>
+</body>
+</html>
