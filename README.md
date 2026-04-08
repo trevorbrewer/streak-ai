@@ -31,14 +31,14 @@ STREAK·AI runs a full machine learning pipeline every day at 10 AM ET:
 ---
 
 ## Architecture
-MLB Stats API ────────────────┐
-Baseball Savant (Statcast) ───┤
-OpenWeather API ──────────────┤──► Feature Engineering ──► Claude AI ──► Email
-Park Factors DB ──────────────┘     (src/features.py)      (src/scorer.py)
-▲
-│
-src/data_sources/schedule.py
-Auto-enriches matchups daily — zero manual entry
+
+Data sources feed into the feature engineering pipeline, which feeds Claude AI, which produces ranked picks delivered by email and shown on the dashboard.
+
+- **src/data_sources/schedule.py** auto-enriches all hitter matchups daily from the free MLB Stats API — opponent, starting pitcher, ERA, park, home/away, batting order. Zero manual entry required.
+- **src/features.py** combines all data sources into a flat labeled feature vector with 30+ engineered features.
+- **src/scorer.py** sends the feature vector to Claude AI and parses a structured JSON response with score, confidence, reasoning, and key factors.
+- **src/pipeline.py** orchestrates all 10 steps with timestamped logging, dry run support, and skip flags for faster iteration.
+- **GitHub Actions** runs the full pipeline on a cron schedule and commits results back to the repo automatically.
 
 ---
 
@@ -59,6 +59,7 @@ Auto-enriches matchups daily — zero manual entry
 ---
 
 ## Project Structure
+```
 streak-ai/
 ├── src/
 │   ├── config.py              # Central config loader
@@ -78,15 +79,16 @@ streak-ai/
 │   ├── hitters.json           # Your roster
 │   └── scores_history.json    # 90-day pick history (auto-updated)
 ├── docs/
-│   └── index.html             # Live dashboard (GitHub Pages)
+│   ├── index.html             # Live dashboard (GitHub Pages)
+│   ├── ARCHITECTURE.md        # Full architecture documentation
+│   └── FEATURES.md            # Feature engineering documentation
 ├── tests/                     # 80+ unit tests
 ├── .github/workflows/
 │   ├── ci.yml                 # Tests on every push
 │   └── daily_picks.yml        # Daily 10 AM ET automation
 ├── streak_ai.py               # CLI entry point
 └── requirements.txt
-
----
+```
 
 ## Feature Engineering
 
