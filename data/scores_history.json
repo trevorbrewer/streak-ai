@@ -37,5 +37,44 @@
         "reasoning": "Mookie Betts faces a challenging matchup against elite pitcher Kevin Gausman (2.08 ERA) without platoon advantage as a right-handed batter. His recent form is concerning with a .179 average over the last 30 days, well below his .289 season mark. While Rogers Centre offers a slight hits boost (1.01 factor), the combination of facing an elite same-handed pitcher during a cold streak creates significant headwinds."
       }
     ]
+  },
+  {
+    "date": "2026-04-08",
+    "run_at": "2026-04-08T15:17:51.355648",
+    "picks": [
+      {
+        "name": "Paul Goldschmidt",
+        "team": "STL",
+        "opp": "WSH",
+        "pitcher": "Miles Mikolas",
+        "park": "Nationals Park",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Pitcher quality score of 100 - facing an extremely vulnerable pitcher with 14.46 ERA",
+        "reasoning": "Goldschmidt faces an extremely vulnerable pitcher in Miles Mikolas with a 14.46 ERA, creating a highly favorable matchup that overcomes his recent struggles. While his .222 average over the last 30 days is concerning, the pitcher quality score of 100 indicates an elite matchup opportunity. His solid exit velocity (89.9 mph) and hard hit rate (41.2%) suggest quality contact ability that should capitalize on poor pitching."
+      },
+      {
+        "name": "Freddie Freeman",
+        "team": "LAD",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Rogers Centre",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage as LHB facing RHP with solid season-long batting average",
+        "reasoning": "Freeman brings solid fundamentals with a .302 average and platoon advantage against RHP Cease. His recent form shows slight improvement over the last 7 days (.308) after a cooler 30-day stretch. While Cease is a quality pitcher (2.79 ERA), he's not elite level, and Rogers Centre provides a neutral-to-slightly-favorable hitting environment."
+      },
+      {
+        "name": "Mookie Betts",
+        "team": "LAD",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Rogers Centre",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Recent cold streak combined with tough RHP matchup without platoon edge",
+        "reasoning": "Betts faces a tough matchup against quality RHP Dylan Cease without platoon advantage, compounded by his recent cold streak (.179 over last 30 days). While he's an elite hitter with solid season numbers, the combination of poor recent form, facing a same-handed pitcher with a 2.79 ERA, and below-average contact metrics creates significant risk. The conservative streak mode further penalizes this challenging spot."
+      }
+    ]
   }
 ]
