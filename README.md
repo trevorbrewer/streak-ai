@@ -29,7 +29,7 @@
 | 10 | Claude AI scoring engine | ✅ Done |
 | 11 | Full pipeline orchestrator | ✅ Done |
 | 12 | GitHub Actions daily automation | ✅ Done |
-| 13 | Email report module | ⬜ |
+| 13 | Email report module | ✅ Done |
 | 14 | Web dashboard (GitHub Pages) | ⬜ |
 | 15 | README, docs & portfolio polish | ⬜ |
 
