@@ -21,6 +21,7 @@ def cmd_run(args):
         skip_stats=getattr(args, 'skip_stats', False),
         skip_statcast=getattr(args, 'skip_statcast', False),
         skip_weather=getattr(args, 'skip_weather', False),
+        skip_auto_roster=getattr(args, 'skip_auto_roster', False),
     )
 
 
@@ -94,6 +95,7 @@ if __name__ == "__main__":
     parser.add_argument("--skip-stats",    action="store_true")
     parser.add_argument("--skip-statcast", action="store_true")
     parser.add_argument("--skip-weather",  action="store_true")
+    parser.add_argument("--skip-auto-roster", action="store_true")
 
     args = parser.parse_args()
 

@@ -154,27 +154,31 @@ def step_enrich_matchups(hitters: list, date: str) -> list:
 def step_fetch_stats(hitters: list) -> list:
     """Step 3 — Fetch season stats from MLB Stats API."""
     _divider("STEP 3: Fetch Season Stats")
+    enriched = []
     for h in hitters:
         try:
             _log("step", f"Fetching stats for {h.name}...")
             h = enrich_hitter_stats(h)
         except Exception as e:
             _log("warn", f"Stats fetch failed for {h.name}: {e}")
+        enriched.append(h)
     _log("ok", "Season stats fetch complete")
-    return hitters
+    return enriched
 
 
 def step_fetch_statcast(hitters: list) -> list:
     """Step 4 — Fetch Statcast advanced metrics."""
     _divider("STEP 4: Fetch Statcast Metrics")
+    enriched = []
     for h in hitters:
         try:
             _log("step", f"Fetching Statcast for {h.name}...")
             h = enrich_hitter_statcast(h)
         except Exception as e:
             _log("warn", f"Statcast fetch failed for {h.name}: {e}")
+        enriched.append(h)
     _log("ok", "Statcast fetch complete")
-    return hitters
+    return enriched
 
 
 def step_fetch_weather(hitters: list) -> list:
@@ -185,6 +189,7 @@ def step_fetch_weather(hitters: list) -> list:
         return hitters
 
     seen_parks = set()
+    enriched = []
     for h in hitters:
         if h.park and h.park not in seen_parks:
             try:
@@ -194,12 +199,34 @@ def step_fetch_weather(hitters: list) -> list:
             except Exception as e:
                 _log("warn", f"Weather fetch failed for {h.park}: {e}")
         elif h.park in seen_parks:
-            # Re-use cached weather for same park
             h = enrich_hitter_weather(h)
+        enriched.append(h)
 
     _log("ok", f"Weather fetched for {len(seen_parks)} parks")
-    return hitters
+    return enriched
 
+def step_auto_roster(date: str, skip_auto_roster: bool = False) -> list:
+    """
+    Step 2b — Pull all hitters batting 1-4 today.
+    These are scored alongside the manual roster but not
+    saved permanently to hitters.json.
+    """
+    from src.data_sources.schedule import get_top_of_order_hitters
+
+    if skip_auto_roster:
+        return []
+
+    _divider("STEP 2b: Auto-Roster (slots 1-4)")
+    _log("step", "Scanning all lineups for hitters batting 1st through 4th...")
+
+    auto_hitters = get_top_of_order_hitters(date=date)
+
+    if not auto_hitters:
+        _log("warn", "No lineup data yet — lineups post 3-4 hours before games")
+        return []
+
+    _log("ok", f"Auto-rostered {len(auto_hitters)} hitters batting 1-4")
+    return auto_hitters
 
 def step_engineer_features(hitters: list) -> tuple[list, list]:
     """Step 6 — Engineer all features for each hitter."""
@@ -268,6 +295,7 @@ def run_pipeline(
     skip_stats: bool = False,
     skip_statcast: bool = False,
     skip_weather: bool = False,
+    skip_auto_roster: bool = False,
 ) -> list:
     """
     Run the full daily picks pipeline.
@@ -308,14 +336,33 @@ def run_pipeline(
     if not hitters:
         _log("error", "No hitters to process — exiting")
         return []
+    
+    # # Pre-filter — only keep hitters with reasonable matchups
+    # # This cuts the list before expensive API calls
+    # hitters = [
+    #     h for h in hitters
+    #     if h.era is None or h.era >= 2.0
+    # ]
 
-    # ── Step 2: Matchups ──────────────────────────────────────────
+    # ── Step 2: Matchups ──────────────────────────────────────
     hitters = step_enrich_matchups(hitters, date)
     if not hitters:
         _log("error", "No hitters have games today — exiting")
         return []
 
-    # ── Step 3: Season stats ──────────────────────────────────────
+    # ── Step 2b: Auto-roster top of order hitters ─────────────
+    if not skip_auto_roster:
+        auto_hitters = step_auto_roster(date)
+        if auto_hitters:
+            existing_names = {h.name.lower() for h in hitters}
+            new_hitters = [
+                h for h in auto_hitters
+                if h.name.lower() not in existing_names
+            ]
+            _log("ok", f"Adding {len(new_hitters)} new auto-rostered hitters")
+            hitters = hitters + new_hitters
+
+    # ── Step 3: Season stats ──────────────────────────────────
     if not skip_stats:
         hitters = step_fetch_stats(hitters)
 

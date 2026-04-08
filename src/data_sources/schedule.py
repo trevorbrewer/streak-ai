@@ -395,6 +395,82 @@ def clear_schedule_cache(date: str = None):
         cleared += 1
     print(f"  [cache] Cleared {cleared} schedule cache files")
 
+def get_top_of_order_hitters(date: str = None, slots: tuple = (1, 2, 3, 4)) -> list:
+    """
+    Pull every player batting in slots 1-4 across all of today's games.
+    Returns a list of Hitter objects ready for enrichment and scoring.
+    Does not save to hitters.json — fresh slate every day.
+
+    Args:
+        date:  "YYYY-MM-DD" string, defaults to today
+        slots: batting order slots to include, default (1, 2, 3, 4)
+
+    Returns:
+        list of Hitter objects with name, team, opp, pitcher,
+        phand, era, park, home_away, batting_order populated.
+    """
+    from src.models import Hitter
+
+    if date is None:
+        date = datetime.date.today().isoformat()
+
+    games = get_todays_games(date)
+    if not games:
+        print("  [warn] No games found for auto-roster")
+        return []
+
+    print(f"\n[auto-roster] Scanning lineups for slots {slots} across {len(games)} games...")
+
+    hitters = []
+    seen_ids = set()
+
+    for game in games:
+        game_id   = game["game_id"]
+        home_abbr = game["home_abbr"]
+        away_abbr = game["away_abbr"]
+
+        for side, team_abbr, opp_abbr in [
+            ("home", home_abbr, away_abbr),
+            ("away", away_abbr, home_abbr),
+        ]:
+            lineup = get_lineup(game_id, team_abbr)
+            if not lineup:
+                continue
+
+            pitcher = get_starting_pitcher(game_id, opp_abbr)
+
+            for player in lineup:
+                if player["batting_order"] not in slots:
+                    continue
+                if player["id"] in seen_ids:
+                    continue
+                if not player["name"]:
+                    continue
+
+                seen_ids.add(player["id"])
+
+                h = Hitter(
+                    id=player["id"],
+                    name=player["name"],
+                    team=team_abbr,
+                    opp=opp_abbr,
+                    park=game["venue"],
+                    home_away=side,
+                    batting_order=player["batting_order"],
+                    pitcher=pitcher.get("name") if pitcher else "TBD",
+                    phand=pitcher.get("hand", "R") if pitcher else "R",
+                    era=pitcher.get("era") if pitcher else None,
+                )
+                hitters.append(h)
+                print(
+                    f"  [auto] #{player['batting_order']} "
+                    f"{player['name']} ({team_abbr}) "
+                    f"vs {pitcher.get('name', 'TBD') if pitcher else 'TBD'}"
+                )
+
+    print(f"\n[auto-roster] Found {len(hitters)} hitters batting 1-4 today")
+    return hitters
+
 
 if __name__ == "__main__":
     print_todays_slate()
