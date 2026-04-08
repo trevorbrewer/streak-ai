@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2026-04-07",
+    "run_at": "2026-04-07T23:35:04.976810",
+    "picks": [
+      {
+        "name": "Freddie Freeman",
+        "team": "LAD",
+        "opp": "TOR",
+        "pitcher": "Kevin Gausman",
+        "park": "Rogers Centre",
+        "score": 48,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher quality - Gausman's 2.08 ERA and high strikeout rate",
+        "reasoning": "Freeman has solid season numbers (.302 AVG, .375 wOBA) and the platoon advantage as a lefty facing Gausman. However, Gausman is an elite pitcher with a 2.08 ERA and strong strikeout ability, creating a challenging matchup. Freeman's recent 30-day form has cooled to .261, though his last 7 days show slight improvement. The conservative streak mode penalizes this elite pitcher matchup heavily."
+      },
+      {
+        "name": "Paul Goldschmidt",
+        "team": "STL",
+        "opp": "WSH",
+        "pitcher": "Cade Cavalli",
+        "park": "Nationals Park",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher quality (Cavalli's 2.51 ERA and 30.2 pitcher quality score)",
+        "reasoning": "Goldschmidt faces a challenging matchup against elite pitcher Cade Cavalli, who has a 2.51 ERA and rates as a high-quality opponent. The veteran slugger is struggling with recent form (.222 over last 30 days) and lacks a platoon advantage facing a same-handed pitcher. While his season stats show decent power (.468 SLG), the combination of tough pitcher matchup and cold bat creates significant headwinds."
+      },
+      {
+        "name": "Mookie Betts",
+        "team": "LAD",
+        "opp": "TOR",
+        "pitcher": "Kevin Gausman",
+        "park": "Rogers Centre",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup against Kevin Gausman with 2.08 ERA",
+        "reasoning": "Mookie Betts faces a challenging matchup against elite pitcher Kevin Gausman (2.08 ERA) without platoon advantage as a right-handed batter. His recent form is concerning with a .179 average over the last 30 days, well below his .289 season mark. While Rogers Centre offers a slight hits boost (1.01 factor), the combination of facing an elite same-handed pitcher during a cold streak creates significant headwinds."
+      }
+    ]
+  }
+]
