@@ -217,3 +217,4 @@ data/scores_history.json
 
 # Virtual environment
 venv/
+email_preview.html

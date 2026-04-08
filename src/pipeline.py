@@ -339,8 +339,9 @@ def run_pipeline(
     # ── Step 9: Save ──────────────────────────────────────────────
     if not dry_run:
         step_save(all_scored, date)
+        step_send_email(all_scored, top_picks)
     else:
-        _log("warn", "Dry run — skipping save")
+        _log("warn", "Dry run — skipping save and email")
 
     # ── Summary ───────────────────────────────────────────────────
     elapsed = (datetime.datetime.now() - start_time).seconds
@@ -418,3 +419,24 @@ if __name__ == "__main__":
             skip_statcast=args.skip_statcast,
             skip_weather=args.skip_weather,
         )
+
+
+def step_send_email(scored: list, top_picks: list):
+    """Optional Step 10 — Send email report via SendGrid."""
+    from src.email_reporter import send_picks_email
+    _divider("STEP 10: Send Email")
+
+    if not CONFIG.get("sendgrid_api_key"):
+        _log("warn", "No SendGrid API key — skipping email")
+        return
+
+    if not CONFIG.get("email_recipients"):
+        _log("warn", "No email recipients configured — skipping email")
+        return
+
+    _log("step", f"Sending picks email to {CONFIG['email_recipients']}...")
+    success = send_picks_email(scored)
+    if success:
+        _log("ok", "Email sent successfully")
+    else:
+        _log("warn", "Email delivery failed — check SendGrid config")
