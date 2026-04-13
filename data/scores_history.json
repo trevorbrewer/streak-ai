@@ -3659,5 +3659,440 @@
         "reasoning": "P\u00e9rez presents multiple severe red flags with zero statistical foundation to evaluate. His 0.000 slash line indicates either no MLB at-bats or complete failure at the plate. Facing Sandy Alcantara, an elite pitcher with a microscopic 0.74 ERA, compounds the difficulty exponentially. The platoon disadvantage (RHB vs RHP) and poor contact metrics (24.4% hard hit rate, 84.4 mph exit velocity) suggest even marginal contact will be difficult to achieve."
       }
     ]
+  },
+  {
+    "date": "2026-04-13",
+    "run_at": "2026-04-13T15:26:51.789629",
+    "picks": [
+      {
+        "name": "Aaron Judge",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Yankee Stadium",
+        "score": 78,
+        "confidence": "high",
+        "key_factor": "Hot streak (.412 L7) combined with strong platoon advantage vs struggling LHP",
+        "reasoning": "Judge has a strong platoon advantage facing lefty Kikuchi, who has struggled significantly with a 6.75 ERA. Judge is red-hot over the last 7 days (.412 avg), showing excellent momentum that accelerates his scoring. The favorable matchup score of 68.7 and momentum score of 85.0 create a compelling case despite his modest season numbers."
+      },
+      {
+        "name": "Corbin Carroll",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "TBD",
+        "park": "Oriole Park at Camden Yards",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Favorable matchup against below-average pitcher quality (76.4 score) combined with strong season baseline",
+        "reasoning": "Carroll shows strong overall numbers (.297/.386/.595) with solid recent form maintaining season pace. The favorable matchup against a 4.82 ERA pitcher and slight park boost at Camden Yards provide additional edge. However, facing same-handed pitching without platoon advantage and elevated BABIP suggesting potential regression temper expectations slightly."
+      },
+      {
+        "name": "Paul Goldschmidt",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Yankee Stadium",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Favorable platoon matchup against struggling left-handed pitcher",
+        "reasoning": "Goldschmidt has a clear platoon advantage against LHP Kikuchi, who has struggled significantly with a 6.75 ERA. The matchup score of 68.7 reflects this favorable setup, and Yankee Stadium provides a slight hits boost. However, Goldschmidt's recent form has been concerning with just a .222 average over the last 30 days, and his contact quality metrics are below elite levels."
+      },
+      {
+        "name": "Amed Rosario",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Yankee Stadium",
+        "score": 67,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 67.8."
+      },
+      {
+        "name": "Jared Young",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Justin Wrobleski",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 64,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 64.9."
+      },
+      {
+        "name": "Nick Kurtz",
+        "team": "OAK",
+        "opp": "TEX",
+        "pitcher": "Nathan Eovaldi",
+        "park": "Sutter Health Park",
+        "score": 60,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 60.0."
+      },
+      {
+        "name": "Bo Bichette",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Justin Wrobleski",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 54,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 54.6."
+      },
+      {
+        "name": "Josh Bell",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Garrett Crochet",
+        "park": "Target Field",
+        "score": 53,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 53.2."
+      },
+      {
+        "name": "Jose Fernandez",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "TBD",
+        "park": "Oriole Park at Camden Yards",
+        "score": 52,
+        "confidence": "medium",
+        "key_factor": "BABIP regression risk with .364 mark well above sustainable levels",
+        "reasoning": "Fernandez shows solid season performance (.313 BA) but faces significant headwinds. His .364 BABIP suggests he's been lucky and due for regression, while facing a same-handed pitcher eliminates platoon advantage. The early season small sample warning adds uncertainty to his stats. Camden Yards provides a modest boost (1.07 factor), but the pitcher quality score of 76.4 indicates a competent opponent."
+      },
+      {
+        "name": "Matt Wallner",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Garrett Crochet",
+        "park": "Target Field",
+        "score": 50,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 50.5."
+      },
+      {
+        "name": "Cody Bellinger",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Yankee Stadium",
+        "score": 50,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 50.8."
+      },
+      {
+        "name": "Bryce Harper",
+        "team": "PHI",
+        "opp": "CHC",
+        "pitcher": "Javier Assad",
+        "park": "Citizens Bank Park",
+        "score": 49,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 49.7."
+      },
+      {
+        "name": "Xavier Edwards",
+        "team": "MIA",
+        "opp": "ATL",
+        "pitcher": "Grant Holmes",
+        "park": "Truist Park",
+        "score": 48,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 48.7."
+      },
+      {
+        "name": "Jordan Walker",
+        "team": "STL",
+        "opp": "CLE",
+        "pitcher": "Gavin Williams",
+        "park": "Busch Stadium",
+        "score": 47,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 47.5."
+      },
+      {
+        "name": "Trevor Larnach",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Garrett Crochet",
+        "park": "Target Field",
+        "score": 47,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 47.0."
+      },
+      {
+        "name": "Ketel Marte",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "TBD",
+        "park": "Oriole Park at Camden Yards",
+        "score": 47,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 47.5."
+      },
+      {
+        "name": "Andy Ib\u00e1\u00f1ez",
+        "team": "OAK",
+        "opp": "TEX",
+        "pitcher": "Nathan Eovaldi",
+        "park": "Sutter Health Park",
+        "score": 47,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 47.5."
+      },
+      {
+        "name": "Byron Buxton",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Garrett Crochet",
+        "park": "Target Field",
+        "score": 46,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 46.2."
+      },
+      {
+        "name": "Giancarlo Stanton",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Yankee Stadium",
+        "score": 46,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 46.0."
+      },
+      {
+        "name": "Jacob Wilson",
+        "team": "OAK",
+        "opp": "TEX",
+        "pitcher": "Nathan Eovaldi",
+        "park": "Sutter Health Park",
+        "score": 45,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 45.8."
+      },
+      {
+        "name": "Gabriel Moreno",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "TBD",
+        "park": "Oriole Park at Camden Yards",
+        "score": 44,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 44.9."
+      },
+      {
+        "name": "Agust\u00edn Ram\u00edrez",
+        "team": "MIA",
+        "opp": "ATL",
+        "pitcher": "Grant Holmes",
+        "park": "Truist Park",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with Grant Holmes (2.55 ERA) negating recent hot streak",
+        "reasoning": "Ram\u00edrez faces a challenging matchup against elite pitcher Grant Holmes (2.55 ERA) without platoon advantage as a righty-vs-righty spot. His weak contact quality (81.7 mph exit velocity, 24.6% hard hit rate) and poor season average (.231) create a low floor despite recent momentum. The slight park boost and hot streak provide minimal upside against such strong pitching."
+      },
+      {
+        "name": "Luis Robert Jr.",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Justin Wrobleski",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "BABIP regression risk with .375 BABIP being 75 points above league average",
+        "reasoning": "Robert has solid contact skills with a .313 average and platoon advantage against LHP Wrobleski. However, his elevated BABIP (.375) suggests some luck that could regress, and his modest Statcast metrics (83.8 mph exit velocity, 28.6% hard hit rate) indicate average contact quality. The conservative streak mode penalizes the risk of regression from his current hot hitting."
+      },
+      {
+        "name": "Ildemaro Vargas",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "TBD",
+        "park": "Oriole Park at Camden Yards",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "BABIP regression risk with .478 season mark being unsustainably high",
+        "reasoning": "Vargas shows exceptional season numbers (.429 AVG) but multiple red flags emerge. His .478 BABIP indicates extreme luck that's already regressing (cold L7 trend). The 83.5 mph exit velocity and 31.5% hard hit rate suggest weak contact quality that won't sustain his hot start. Same-handed matchup against RHP removes platoon advantage."
+      },
+      {
+        "name": "Jorge Polanco",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Justin Wrobleski",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Poor contact quality with 82.2 mph exit velocity and 21.6% hard hit rate",
+        "reasoning": "Polanco has significant offensive struggles with a .222 average and poor contact quality metrics (82.2 mph exit velocity, 21.6% hard hit rate). While he has platoon advantage against LHP Wrobleski and is due for BABIP regression from unlucky .267 mark, his fundamentally poor contact quality limits upside. The slightly pitcher-friendly park and early season small sample add uncertainty to an already challenging profile."
+      },
+      {
+        "name": "Francisco Lindor",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Justin Wrobleski",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "BABIP regression potential (-0.088 luck factor) combined with platoon advantage",
+        "reasoning": "Lindor has clear platoon advantage against LHP Wrobleski and is significantly unlucky with BABIP (.212 vs likely true talent around .300), suggesting positive regression is due. However, his contact quality is poor (83.4 mph exit velocity, 24.2% hard hit rate) and he's hitting just .167 overall with concerning recent form. The early season sample size adds uncertainty but current performance metrics are troubling."
+      },
+      {
+        "name": "Adrian Del Castillo",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "TBD",
+        "park": "Oriole Park at Camden Yards",
+        "score": 42,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 42.9."
+      },
+      {
+        "name": "Brent Rooker",
+        "team": "OAK",
+        "opp": "TEX",
+        "pitcher": "Nathan Eovaldi",
+        "park": "Sutter Health Park",
+        "score": 41,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 41.7."
+      },
+      {
+        "name": "Trea Turner",
+        "team": "PHI",
+        "opp": "CHC",
+        "pitcher": "Javier Assad",
+        "park": "Citizens Bank Park",
+        "score": 37,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 37.7."
+      },
+      {
+        "name": "Kody Clemens",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Garrett Crochet",
+        "park": "Target Field",
+        "score": 36,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 36.6."
+      },
+      {
+        "name": "Luke Keaschall",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Garrett Crochet",
+        "park": "Target Field",
+        "score": 36,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 36.8."
+      },
+      {
+        "name": "Brandon Marsh",
+        "team": "PHI",
+        "opp": "CHC",
+        "pitcher": "Javier Assad",
+        "park": "Citizens Bank Park",
+        "score": 33,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 33.3."
+      },
+      {
+        "name": "Alec Burleson",
+        "team": "STL",
+        "opp": "CLE",
+        "pitcher": "Gavin Williams",
+        "park": "Busch Stadium",
+        "score": 32,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 32.5."
+      },
+      {
+        "name": "Kyle Schwarber",
+        "team": "PHI",
+        "opp": "CHC",
+        "pitcher": "Javier Assad",
+        "park": "Citizens Bank Park",
+        "score": 32,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with high strikeout potential against struggling hitter",
+        "reasoning": "Schwarber faces a brutal matchup against Assad who has elite stuff and poses significant strikeout risk. His .182 average and poor recent form (.158 L7) create a very low floor. While he's due for BABIP regression and has slight park advantage, the early season small sample and same-handed matchup without platoon edge make this a clear avoid in conservative mode."
+      },
+      {
+        "name": "Jakob Marsee",
+        "team": "MIA",
+        "opp": "ATL",
+        "pitcher": "Grant Holmes",
+        "park": "Truist Park",
+        "score": 32,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with Holmes (2.55 ERA) against struggling hitter",
+        "reasoning": "Marsee faces significant challenges with a .174 season average against an elite pitcher posting a 2.55 ERA. His poor contact quality (80.5 mph exit velocity, 28.4% hard hit rate) and same-handed matchup create additional headwinds. While he's been slightly hot over the last 7 days and is due for BABIP regression, the elite pitcher quality and poor underlying contact metrics outweigh these positives in conservative mode."
+      },
+      {
+        "name": "Geraldo Perdomo",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "TBD",
+        "park": "Oriole Park at Camden Yards",
+        "score": 32,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 32.4."
+      },
+      {
+        "name": "Iv\u00e1n Herrera",
+        "team": "STL",
+        "opp": "CLE",
+        "pitcher": "Gavin Williams",
+        "park": "Busch Stadium",
+        "score": 31,
+        "confidence": "low",
+        "key_factor": "API unavailable",
+        "reasoning": "API scoring failed \u2014 using feature engineering estimate of 31.1."
+      },
+      {
+        "name": "JJ Wetherholt",
+        "team": "STL",
+        "opp": "CLE",
+        "pitcher": "Gavin Williams",
+        "park": "Busch Stadium",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Elite pitcher matchup against struggling hitter form",
+        "reasoning": "Wetherholt faces multiple headwinds that make this a poor spot for conservative streak mode. He's hitting just .174 over his last 7 games, well below his already modest .231 season average. Facing Gavin Williams, an elite pitcher with a 2.04 ERA, compounds the difficulty as right-handed batters lack platoon advantage. The unfavorable park factor at Busch Stadium further suppresses hit probability."
+      },
+      {
+        "name": "Liam Hicks",
+        "team": "MIA",
+        "opp": "ATL",
+        "pitcher": "Grant Holmes",
+        "park": "Truist Park",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Severe cold streak combined with elite pitcher matchup",
+        "reasoning": "Hicks faces multiple significant disadvantages today. He's in a brutal cold streak (.188 over last 7 games, 135 points below his season average) against an elite pitcher with a 2.55 ERA. His poor contact quality metrics (82.0 mph exit velocity, 24.7% hard hit rate) suggest he lacks the tools to consistently barrel up quality pitching. The same-handed matchup against Holmes provides no platoon advantage, and conservative streak mode demands avoiding high-risk spots like this."
+      }
+    ]
   }
 ]
