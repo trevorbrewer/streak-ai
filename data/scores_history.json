@@ -4094,5 +4094,440 @@
         "reasoning": "Hicks faces multiple significant disadvantages today. He's in a brutal cold streak (.188 over last 7 games, 135 points below his season average) against an elite pitcher with a 2.55 ERA. His poor contact quality metrics (82.0 mph exit velocity, 24.7% hard hit rate) suggest he lacks the tools to consistently barrel up quality pitching. The same-handed matchup against Holmes provides no platoon advantage, and conservative streak mode demands avoiding high-risk spots like this."
       }
     ]
+  },
+  {
+    "date": "2026-04-14",
+    "run_at": "2026-04-14T15:24:49.777275",
+    "picks": [
+      {
+        "name": "Aaron Judge",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Reid Detmers",
+        "park": "Yankee Stadium",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Hot streak (.412 L7) combined with platoon advantage vs left-handed pitching",
+        "reasoning": "Judge has a clear platoon advantage against LHP Detmers and is riding a hot streak with a .412 average over the last 7 games. The favorable matchup score of 59.3 and strong momentum score of 85.0 support a solid pick. However, his season-long struggles (.244 AVG) and modest contact metrics create some concern about sustainability."
+      },
+      {
+        "name": "Amed Rosario",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Reid Detmers",
+        "park": "Yankee Stadium",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Strong platoon advantage combined with hot recent form and BABIP regression potential",
+        "reasoning": "Rosario has a strong platoon advantage as a righty facing lefty Detmers, who has a mediocre 4.60 ERA. His recent hot streak (.375 over last 7 days) and severe BABIP unluck (-0.078) suggest positive regression is due. However, his poor season OBP (.267) and early-season small sample size create some uncertainty about sustainability."
+      },
+      {
+        "name": "Bryce Harper",
+        "team": "PHI",
+        "opp": "CHC",
+        "pitcher": "Riley Martin",
+        "park": "Citizens Bank Park",
+        "score": 58,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak momentum with platoon advantage",
+        "reasoning": "Harper presents a mixed profile with some encouraging signals offset by concerning contact quality. His recent hot streak (+88 points above season average over last 7 games) and platoon advantage against the LHP create optimism. However, his poor contact metrics (83.2 mph exit velocity, 22.9% hard hit rate) and below-average BABIP suggest underlying quality issues that could continue."
+      },
+      {
+        "name": "Paul Goldschmidt",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Reid Detmers",
+        "park": "Yankee Stadium",
+        "score": 48,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage against left-handed pitching",
+        "reasoning": "Goldschmidt presents a borderline case with mixed signals. The platoon advantage against LHP Detmers (4.60 ERA) provides a meaningful edge, and the pitcher quality score of 72 suggests a hittable matchup. However, his recent form is concerning with just a .222 average over the last 30 days and declining momentum. His season stats (.275 AVG, .350 wOBA) are respectable but not elite, and the contact quality metrics are merely average."
+      },
+      {
+        "name": "Cody Bellinger",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Reid Detmers",
+        "park": "Yankee Stadium",
+        "score": 47,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage vs left-handed pitcher Detmers",
+        "reasoning": "Bellinger has a clear platoon advantage as a right-handed hitter facing lefty Detmers, which is the primary positive factor. However, his contact quality metrics are concerning with below-average exit velocity (86.0 mph) and hard-hit rate (33.7%), suggesting weak contact when he does make contact. His recent form shows slight decline over the last 7 days, and the overall statistical profile indicates a hitter struggling to make consistent quality contact despite favorable matchup conditions."
+      },
+      {
+        "name": "Corbin Carroll",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "Trevor Rogers",
+        "park": "Oriole Park at Camden Yards",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup (Trevor Rogers 1.89 ERA) significantly outweighs platoon advantage",
+        "reasoning": "Carroll has solid season numbers (.297 avg) with a platoon advantage against LHP Rogers, but faces a dominant pitcher with a 1.89 ERA who qualifies as elite. His BABIP luck (+0.046) suggests potential regression, and the pitcher quality heavily outweighs the modest park factor boost (1.07). The conservative streak mode further penalizes this elite pitcher matchup."
+      },
+      {
+        "name": "Jared Young",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Yoshinobu Yamamoto",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup against Yoshinobu Yamamoto",
+        "reasoning": "Young is riding a hot streak with excellent recent form (.500 over last 7 days), but faces a daunting matchup against elite pitcher Yamamoto. His contact quality metrics are concerning (81.6 mph exit velocity, 26.1% hard hit rate) and he's facing same-handed pitching without platoon advantage. The BABIP regression risk and pitcher-friendly park further diminish his floor in this conservative mode."
+      },
+      {
+        "name": "Nick Kurtz",
+        "team": "OAK",
+        "opp": "TEX",
+        "pitcher": "MacKenzie Gore",
+        "park": "Sutter Health Park",
+        "score": 42,
+        "confidence": "low",
+        "key_factor": "Recent hot streak momentum (.300 L7) providing temporary boost despite poor season stats",
+        "reasoning": "Kurtz presents a challenging evaluation with significant red flags outweighing positives. His .189 season average and .243 slugging indicate poor overall production, though recent hot streak (.300 L7) and platoon advantage provide some hope. Gore's quality (2.76 ERA) and Kurtz's lucky .368 BABIP suggesting regression create substantial downside risk in conservative mode."
+      },
+      {
+        "name": "Bo Bichette",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Yoshinobu Yamamoto",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with Yamamoto (2.50 ERA) facing struggling hitter with poor contact quality",
+        "reasoning": "Bichette faces a nightmare matchup against elite pitcher Yamamoto with no platoon advantage as a right-handed batter. His horrific .200 season average and poor contact metrics (82.9 mph exit velocity, 25.2% hard hit rate) create a very low floor. However, recent hot streak (.286 over L7) and BABIP regression candidate status (.263 vs likely true talent) provide some hope for a hit."
+      },
+      {
+        "name": "Josh Bell",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Sonny Gray",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak momentum against quality pitcher matchup",
+        "reasoning": "Bell faces a challenging matchup against quality pitcher Sonny Gray (2.76 ERA) with no platoon advantage as a righty vs righty. While his recent hot streak (+0.048 over 7 days) and strong momentum score (72.0) provide some optimism, his elevated BABIP (0.364) suggests potential regression. His below-average contact metrics (83.4 mph exit velo, 27.0% hard hit rate) against a solid pitcher create meaningful risk."
+      },
+      {
+        "name": "Jose Fernandez",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "Trevor Rogers",
+        "park": "Oriole Park at Camden Yards",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup against Trevor Rogers (1.89 ERA)",
+        "reasoning": "Jose Fernandez has solid season numbers (.313 AVG) and benefits from a platoon advantage against LHP Rogers. However, Rogers is an elite pitcher with a 1.89 ERA, creating a tough matchup. Fernandez's BABIP suggests he's been somewhat lucky (.364 vs league average ~.300), indicating potential regression. The early season small sample size adds uncertainty to his true talent level."
+      },
+      {
+        "name": "Matt Wallner",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Sonny Gray",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak showing +43 point improvement over last 7 games",
+        "reasoning": "Wallner shows recent hot form (+43 points above season average over L7) and accelerating momentum, but faces significant headwinds. His .224 season average and poor contact metrics (83.3 mph exit velocity, 28.7% hard hit rate) indicate fundamental struggles. The same-handed matchup against quality RHP Sonny Gray (2.76 ERA) removes platoon advantage, while his inflated .381 BABIP suggests negative regression is likely."
+      },
+      {
+        "name": "Jordan Walker",
+        "team": "STL",
+        "opp": "CLE",
+        "pitcher": "Joey Cantillo",
+        "park": "Busch Stadium",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher Joey Cantillo with 2.45 ERA in conservative streak mode",
+        "reasoning": "Walker shows strong season numbers (.314 avg) with platoon advantage against lefty Cantillo, but faces significant headwinds. His BABIP luck (+0.057) suggests regression is coming, while Cantillo's elite 2.45 ERA and classification as an elite pitcher create a tough matchup. The conservative streak mode heavily penalizes this elite pitching, dropping what could be a borderline pick into avoid territory."
+      },
+      {
+        "name": "Alec Burleson",
+        "team": "STL",
+        "opp": "CLE",
+        "pitcher": "Joey Cantillo",
+        "park": "Busch Stadium",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage vs elite left-handed pitcher creates mixed signals",
+        "reasoning": "Burleson has clear platoon advantage facing lefty Cantillo, and his .244 BABIP suggests he's been unlucky and due for regression. However, he's in a cold streak hitting just .190 over last 7 days, well below his already poor .240 season average. Cantillo is an elite pitcher with a 2.45 ERA, making this a difficult matchup despite the platoon edge."
+      },
+      {
+        "name": "Kyle Schwarber",
+        "team": "PHI",
+        "opp": "CHC",
+        "pitcher": "Riley Martin",
+        "park": "Citizens Bank Park",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage against left-handed pitching",
+        "reasoning": "Schwarber has a clear platoon advantage against the LHP Martin and is due for positive BABIP regression after hitting just .182 with unlucky .250 BABIP. However, his poor recent form (.158 last 7 days), weak contact quality (33.2 score), and facing what appears to be an elite pitcher (0.00 ERA, though likely small sample) create significant risk. The conservative streak mode penalizes this matchup further given the uncertainty."
+      },
+      {
+        "name": "Xavier Edwards",
+        "team": "MIA",
+        "opp": "ATL",
+        "pitcher": "Reynaldo L\u00f3pez",
+        "park": "Truist Park",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with L\u00f3pez's 1.15 ERA",
+        "reasoning": "Edwards has elite batting average (.400) but faces a dominant pitcher in L\u00f3pez (1.15 ERA) without platoon advantage. His BABIP is extremely high at .436, suggesting regression is likely. The conservative streak mode heavily penalizes facing elite pitchers, and his modest contact quality (21% hard hit rate) makes him vulnerable to L\u00f3pez's dominance."
+      },
+      {
+        "name": "Trevor Larnach",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Sonny Gray",
+        "park": "Target Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Facing quality RHP Sonny Gray without platoon advantage",
+        "reasoning": "Larnach faces a tough matchup against quality RHP Sonny Gray with no platoon advantage and concerning regression indicators. While his .313 season average looks solid, the BABIP luck suggests unsustainable performance, and his mediocre contact quality (50.6 score, 84.6 mph exit velo) provides little margin for error. The conservative streak mode heavily penalizes this spot given Gray's 2.76 ERA and Larnach's limited power upside."
+      },
+      {
+        "name": "Byron Buxton",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Sonny Gray",
+        "park": "Target Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Poor season batting average (.214) combined with facing quality same-handed pitcher",
+        "reasoning": "Buxton faces a challenging matchup against quality RHP Sonny Gray with no platoon advantage and poor season-long numbers (.214 AVG, .281 BABIP). While he shows slight recent improvement and accelerating momentum, his below-average contact quality (40.5 score) and unfavorable park factors create significant headwinds. The conservative streak mode further penalizes this low-floor spot against a solid pitcher."
+      },
+      {
+        "name": "Giancarlo Stanton",
+        "team": "NYY",
+        "opp": "LAA",
+        "pitcher": "Reid Detmers",
+        "park": "Yankee Stadium",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Severe recent cold streak combined with unsustainable BABIP luck",
+        "reasoning": "While Stanton has a platoon advantage against LHP Detmers and strong season numbers (.341 average), multiple red flags emerge. His BABIP of .448 suggests significant regression risk, and he's ice cold over the last 7 days (.190). His contact quality metrics are below average (45.5 contact score, 30.2% hard hit rate), making him vulnerable to negative BABIP correction. The conservative streak mode further penalizes this high-variance profile."
+      },
+      {
+        "name": "Gabriel Moreno",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "Trevor Rogers",
+        "park": "Oriole Park at Camden Yards",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup against Trevor Rogers (1.89 ERA)",
+        "reasoning": "Moreno faces a significant challenge against Trevor Rogers, who has been dominant with a 1.89 ERA and rates as an elite pitcher. While Moreno has a platoon advantage as a righty facing a lefty, his recent cold streak (.235 over last 7 days) and below-average contact metrics (29.1% hard hit rate) create substantial risk. The favorable park factor provides minimal help against such a strong pitcher."
+      },
+      {
+        "name": "Luis Robert Jr.",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Yoshinobu Yamamoto",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher Yamamoto (2.50 ERA) with same-handed disadvantage",
+        "reasoning": "Robert faces a tough matchup against elite pitcher Yoshinobu Yamamoto with no platoon advantage as a righty vs righty. His BABIP luck suggests regression is coming, and the pitcher-friendly Dodger Stadium further dampens his hit probability. While his season average is solid at .313, the combination of elite opposing pitching and unfavorable park factors creates significant headwinds."
+      },
+      {
+        "name": "Ildemaro Vargas",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "Trevor Rogers",
+        "park": "Oriole Park at Camden Yards",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "BABIP regression risk (.478 is extremely unsustainable)",
+        "reasoning": "Vargas has impressive season numbers (.429 AVG) with a platoon advantage versus lefty Rogers, but multiple warning signs emerge. His .478 BABIP screams unsustainable luck regression, while Rogers' elite 1.89 ERA and strong pitcher quality score (17.8) present a formidable challenge. The recent cooling trend (-61 points in L7) combined with mediocre contact metrics (83.5 mph exit velo, 31.5% hard hit) suggests the hot start may be fading."
+      },
+      {
+        "name": "Jorge Polanco",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Yoshinobu Yamamoto",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with poor hitter contact quality",
+        "reasoning": "Polanco faces significant challenges against elite pitcher Yamamoto despite some positive regression indicators. His poor contact quality (37.9 score, 82.2 mph exit velocity) and lack of platoon advantage create a low floor against a top-tier pitcher. While he's slightly unlucky on BABIP and showing recent momentum, the matchup fundamentals are too unfavorable for conservative streak mode."
+      },
+      {
+        "name": "Trea Turner",
+        "team": "PHI",
+        "opp": "CHC",
+        "pitcher": "Riley Martin",
+        "park": "Citizens Bank Park",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher designation combined with Turner's poor contact quality metrics",
+        "reasoning": "Turner faces significant challenges despite platoon advantage. His poor contact quality (40.9 score, 23.7% hard hit rate) and below-average season performance (.255 AVG) create a low floor. The pitcher quality score of 0 with 'Elite pitcher: True' designation suggests facing a tough opponent, though small sample size (0.00 ERA) adds uncertainty. BABIP luck indicates potential regression from current levels."
+      },
+      {
+        "name": "Brandon Marsh",
+        "team": "PHI",
+        "opp": "CHC",
+        "pitcher": "Riley Martin",
+        "park": "Citizens Bank Park",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Recent cold streak with -62 point drop in L7 average despite platoon advantage",
+        "reasoning": "Marsh has a clear platoon advantage against LHP Riley Martin, but multiple concerning factors outweigh this edge. His recent cold streak shows a significant -62 point drop in average over the last week, indicating poor timing and contact quality. While Martin has a 0.00 ERA suggesting early season small sample size, the combination of Marsh's below-average contact metrics (84.2 mph exit velocity, 26.1% hard hit rate) and current cold form creates meaningful risk."
+      },
+      {
+        "name": "JJ Wetherholt",
+        "team": "STL",
+        "opp": "CLE",
+        "pitcher": "Joey Cantillo",
+        "park": "Busch Stadium",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup (Cantillo 2.45 ERA) in conservative mode",
+        "reasoning": "Wetherholt has clear platoon advantage as a RHB facing LHP Cantillo, but multiple factors work against him. He's in a cold streak hitting just .174 over last 7 days, well below his already modest .231 season average. Cantillo is an elite pitcher with a 2.45 ERA, and the conservative streak mode heavily penalizes facing high-quality pitchers. The early season small sample size adds uncertainty to his underlying metrics."
+      },
+      {
+        "name": "Ketel Marte",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "Trevor Rogers",
+        "park": "Oriole Park at Camden Yards",
+        "score": 35,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup against struggling hitter form",
+        "reasoning": "Marte faces elite pitcher Trevor Rogers (1.89 ERA) while batting just .209 this season with weak contact metrics (87.3 mph exit velocity, 31.2% hard hit rate). His .235 BABIP suggests some bad luck, and the platoon advantage against a lefty provides modest upside. However, Rogers' dominance and Marte's poor overall form create significant headwinds in conservative streak mode."
+      },
+      {
+        "name": "Andy Ib\u00e1\u00f1ez",
+        "team": "OAK",
+        "opp": "TEX",
+        "pitcher": "MacKenzie Gore",
+        "park": "Sutter Health Park",
+        "score": 35,
+        "confidence": "medium",
+        "key_factor": "Recent cold streak with 0.000 average over last 7 days combined with poor season performance",
+        "reasoning": "Ib\u00e1\u00f1ez presents significant concerns with a poor .222 season average, 0.000 over last 7 days, and weak contact metrics (84.8 mph exit velo, 28.7% hard hit rate). While he has platoon advantage against Gore (LHP), the pitcher's strong 2.76 ERA and Ib\u00e1\u00f1ez's overall struggling form outweigh this benefit. The conservative streak mode further penalizes this risky profile."
+      },
+      {
+        "name": "Jacob Wilson",
+        "team": "OAK",
+        "opp": "TEX",
+        "pitcher": "MacKenzie Gore",
+        "park": "Sutter Health Park",
+        "score": 35,
+        "confidence": "medium",
+        "key_factor": "Poor overall hitting performance with .191 AVG and weak contact quality metrics",
+        "reasoning": "Wilson's poor season stats (.191 AVG) and weak contact quality (82.4 mph exit velocity, 26% hard hit rate) create significant concern. While he has a platoon advantage against Gore and appears unlucky with BABIP (.231 vs likely true talent around .300), the quality of contact suggests limited upside. Gore's solid 2.76 ERA adds another layer of difficulty for an already struggling hitter."
+      },
+      {
+        "name": "Agust\u00edn Ram\u00edrez",
+        "team": "MIA",
+        "opp": "ATL",
+        "pitcher": "Reynaldo L\u00f3pez",
+        "park": "Truist Park",
+        "score": 35,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with no platoon advantage",
+        "reasoning": "Ram\u00edrez faces a nightmare matchup against elite pitcher L\u00f3pez (1.15 ERA) without platoon advantage as a righty-vs-righty. His poor contact quality (81.7 mph exit velocity, 24.6% hard hit rate) and weak season average (.231) create a low floor against premium pitching. While he shows slight recent momentum (+30 points over 7 days), this is negated by L\u00f3pez's dominance and the lack of favorable conditions."
+      },
+      {
+        "name": "Francisco Lindor",
+        "team": "NYM",
+        "opp": "LAD",
+        "pitcher": "Yoshinobu Yamamoto",
+        "park": "UNIQLO Field at Dodger Stadium",
+        "score": 32,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup combined with poor contact quality metrics",
+        "reasoning": "Lindor is struggling significantly with a .167 average and extremely low .212 BABIP that's 88 points below league average, suggesting he's due for positive regression. However, facing elite pitcher Yamamoto without platoon advantage in a pitcher-friendly park creates a difficult matchup. His poor contact metrics (83.4 mph exit velocity, 24.2% hard hit rate) indicate underlying performance issues beyond just bad luck."
+      },
+      {
+        "name": "Iv\u00e1n Herrera",
+        "team": "STL",
+        "opp": "CLE",
+        "pitcher": "Joey Cantillo",
+        "park": "Busch Stadium",
+        "score": 32,
+        "confidence": "medium",
+        "key_factor": "Poor offensive production with .184 season average and declining recent form",
+        "reasoning": "Herrera presents significant red flags despite some positive indicators. His .184 season average and .143 recent form show poor offensive production, while his 83.2 mph exit velocity and 32.4% hard hit rate indicate below-average contact quality. Though he has platoon advantage against LHP Cantillo and is due for BABIP regression (.225 vs likely true talent closer to .300), Cantillo's elite 2.45 ERA and the conservative streak mode prioritize avoiding risky spots."
+      },
+      {
+        "name": "Adrian Del Castillo",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "Trevor Rogers",
+        "park": "Oriole Park at Camden Yards",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Extremely poor batting performance (.167 AVG) combined with weak contact quality against elite pitcher",
+        "reasoning": "Del Castillo presents significant red flags with an extremely poor .167 average and weak contact quality (78.0 mph exit velocity, 12.5% hard hit rate). While he has a platoon advantage against lefty Rogers, the pitcher's elite 1.89 ERA and status as a top-tier arm heavily outweighs this benefit. The small sample size early in the season combined with consistently poor performance and weak underlying metrics makes this a clear avoid in conservative mode."
+      },
+      {
+        "name": "Brent Rooker",
+        "team": "OAK",
+        "opp": "TEX",
+        "pitcher": "MacKenzie Gore",
+        "park": "Sutter Health Park",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Poor contact quality with below-average exit velocity and hard hit rate during extended slump",
+        "reasoning": "Rooker is in a severe slump with a .150 average and extremely low .167 BABIP suggesting poor contact quality. His 84.3 mph exit velocity and 29.5% hard hit rate are well below MLB average. While he has platoon advantage against Gore and is due for BABIP regression, the poor contact metrics and recent form make this a risky play in conservative mode."
+      },
+      {
+        "name": "Kody Clemens",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Sonny Gray",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Extremely poor season performance (.130 AVG) combined with recent cold streak",
+        "reasoning": "Clemens presents multiple red flags with a .130 season average, .167 BABIP, and 0.000 average over last 7 days. While he's been unlucky with BABIP and could be due for regression, facing a quality pitcher like Sonny Gray (2.76 ERA) without platoon advantage significantly limits upside. The early season small sample and top-of-order position provide minimal positives against overwhelming negatives."
+      },
+      {
+        "name": "Luke Keaschall",
+        "team": "MIN",
+        "opp": "BOS",
+        "pitcher": "Sonny Gray",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Poor contact quality combined with terrible recent form",
+        "reasoning": "Keaschall presents multiple red flags with a .193 season average and even worse recent form at .160. His 82.1 mph exit velocity and 26% hard hit rate indicate poor contact quality. While his .204 BABIP suggests some unluckiness, the underlying metrics don't support meaningful regression given his weak contact profile."
+      },
+      {
+        "name": "Jakob Marsee",
+        "team": "MIA",
+        "opp": "ATL",
+        "pitcher": "Reynaldo L\u00f3pez",
+        "park": "Truist Park",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Elite pitcher matchup against struggling hitter with poor contact quality",
+        "reasoning": "Marsee faces an elite pitcher in L\u00f3pez (1.15 ERA) with poor season numbers (.174 AVG) and weak contact quality (80.5 mph exit velocity, 28.4% hard hit rate). While he shows slight recent improvement and BABIP suggests some bad luck, the massive talent gap and same-handed matchup create overwhelming disadvantages. The conservative streak mode amplifies concerns about L\u00f3pez's dominance."
+      },
+      {
+        "name": "Geraldo Perdomo",
+        "team": "ARI",
+        "opp": "BAL",
+        "pitcher": "Trevor Rogers",
+        "park": "Oriole Park at Camden Yards",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Ice-cold recent form (.056 L7) combined with elite opposing pitcher",
+        "reasoning": "Perdomo presents multiple significant red flags that outweigh his platoon advantage. His .162 season average is already poor, but his ice-cold recent form (.056 over last 7 days) against an elite pitcher with a 1.89 ERA creates a very challenging scenario. While he's severely unlucky with BABIP and theoretically due for regression, his weak contact quality (21.9% hard hit rate) limits his ability to capitalize against quality pitching."
+      },
+      {
+        "name": "Liam Hicks",
+        "team": "MIA",
+        "opp": "ATL",
+        "pitcher": "Reynaldo L\u00f3pez",
+        "park": "Truist Park",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Elite pitcher matchup with L\u00f3pez's dominant 1.15 ERA",
+        "reasoning": "Hicks faces an elite pitcher in L\u00f3pez (1.15 ERA) with poor recent form (.188 over last 7 days) and weak contact metrics (82 mph exit velo, 24.7% hard hit rate). The same-handed matchup provides no platoon advantage, and while he's slightly unlucky on BABIP, his contact quality suggests limited upside. The combination of elite pitching and cold streak creates significant risk."
+      }
+    ]
   }
 ]
