@@ -78,7 +78,7 @@ MOCK_LINEUP = {
     "teams": {
         "away": {
             "team": {"id": 119},
-            "battingOrder": [660271, 501303],
+            "battingOrder": [660271, 501303, 111111, 222222, 333333, 444444, 555555, 666666, 777777],
             "players": {
                 "ID660271": {
                     "person": {"fullName": "Shohei Ohtani"},
@@ -87,7 +87,35 @@ MOCK_LINEUP = {
                 "ID501303": {
                     "person": {"fullName": "Freddie Freeman"},
                     "position": {"abbreviation": "1B"}
-                }
+                },
+                "ID111111": {
+                    "person": {"fullName": "Mookie Betts"},
+                    "position": {"abbreviation": "RF"}
+                },
+                "ID222222": {
+                    "person": {"fullName": "Will Smith"},
+                    "position": {"abbreviation": "C"}
+                },
+                "ID333333": {
+                    "person": {"fullName": "Max Muncy"},
+                    "position": {"abbreviation": "3B"}
+                },
+                "ID444444": {
+                    "person": {"fullName": "Gavin Lux"},
+                    "position": {"abbreviation": "2B"}
+                },
+                "ID555555": {
+                    "person": {"fullName": "James Outman"},
+                    "position": {"abbreviation": "LF"}
+                },
+                "ID666666": {
+                    "person": {"fullName": "Chris Taylor"},
+                    "position": {"abbreviation": "SS"}
+                },
+                "ID777777": {
+                    "person": {"fullName": "Miguel Vargas"},
+                    "position": {"abbreviation": "CF"}
+                },
             }
         },
         "home": {
@@ -163,7 +191,7 @@ def test_get_starting_pitcher_not_announced():
 def test_get_lineup():
     with patch("src.data_sources.schedule._get", return_value=MOCK_LINEUP):
         lineup = schedule.get_lineup(12345, "LAD")
-    assert len(lineup) == 2
+    assert len(lineup) == 9
     assert lineup[0]["name"] == "Shohei Ohtani"
     assert lineup[0]["batting_order"] == 1
     assert lineup[1]["name"] == "Freddie Freeman"

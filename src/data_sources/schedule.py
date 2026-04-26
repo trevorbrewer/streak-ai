@@ -314,13 +314,21 @@ def enrich_hitter_matchup(hitter, date: str = None) -> object:
         print(f"  [warn] Pitcher not yet announced for {opp_abbr}")
 
     # Get batting order slot if lineup is posted
+    # Get batting order slot if lineup is posted
     lineup = get_lineup(game["game_id"], team)
-    if lineup:
+    if lineup and len(lineup) >= 8:
+        hitter.notes = (hitter.notes or "").replace("LINEUP_UNCONFIRMED", "").strip(" |")
         for player in lineup:
             if hitter.name.lower() in player["name"].lower():
                 hitter.batting_order = player["batting_order"]
                 print(f"  Batting {hitter.batting_order}th in the order")
                 break
+    else:
+        # Mark as unconfirmed so pipeline can filter it out
+        existing = hitter.notes or ""
+        if "LINEUP_UNCONFIRMED" not in existing:
+            hitter.notes = f"{existing} | LINEUP_UNCONFIRMED".strip(" |")
+        print(f"  [warn] Lineup not confirmed for {team} — marking as unconfirmed")
 
     return hitter
 
@@ -395,6 +403,71 @@ def clear_schedule_cache(date: str = None):
         cleared += 1
     print(f"  [cache] Cleared {cleared} schedule cache files")
 
+def is_lineup_confirmed(game_id: int, team_abbr: str) -> bool:
+    """
+    Check if a team's lineup has been officially posted for a game.
+
+    A lineup is considered confirmed when at least 8 players
+    appear in the batting order. The MLB API returns an empty
+    battingOrder list until the lineup is officially submitted.
+
+    Args:
+        game_id:   MLB game ID
+        team_abbr: team abbreviation e.g. "LAD"
+
+    Returns:
+        True if lineup is confirmed, False if not yet posted.
+    """
+    lineup = get_lineup(game_id, team_abbr)
+    confirmed = len(lineup) >= 8
+    if not confirmed:
+        print(f"  [warn] Lineup not yet posted for {team_abbr} (game {game_id})")
+    return confirmed
+
+
+def get_confirmed_games(date: str = None) -> list:
+    """
+    Return only games where BOTH teams have confirmed lineups.
+
+    Args:
+        date: "YYYY-MM-DD" string, defaults to today
+
+    Returns:
+        List of game dicts where both lineups are posted.
+        Each dict includes 'home_confirmed' and 'away_confirmed' flags.
+    """
+    games = get_todays_games(date)
+    confirmed = []
+
+    print(f"\n[schedule] Checking lineup confirmation for {len(games)} games...")
+
+    for game in games:
+        home_confirmed = is_lineup_confirmed(
+            game["game_id"], game["home_abbr"]
+        )
+        away_confirmed = is_lineup_confirmed(
+            game["game_id"], game["away_abbr"]
+        )
+
+        game["home_confirmed"] = home_confirmed
+        game["away_confirmed"] = away_confirmed
+        game["both_confirmed"] = home_confirmed and away_confirmed
+
+        status = "CONFIRMED" if game["both_confirmed"] else "PENDING"
+        print(
+            f"  {game['away_abbr']} @ {game['home_abbr']} "
+            f"— {status}"
+        )
+
+        if game["both_confirmed"]:
+            confirmed.append(game)
+
+    print(
+        f"\n[schedule] {len(confirmed)}/{len(games)} games "
+        f"have confirmed lineups"
+    )
+    return confirmed
+
 def get_top_of_order_hitters(date: str = None, slots: tuple = (1, 2, 3, 4)) -> list:
     """
     Pull every player batting in slots 1-4 across all of today's games.
@@ -419,8 +492,29 @@ def get_top_of_order_hitters(date: str = None, slots: tuple = (1, 2, 3, 4)) -> l
         print("  [warn] No games found for auto-roster")
         return []
 
-    print(f"\n[auto-roster] Scanning lineups for slots {slots} across {len(games)} games...")
+    print(f"\n[auto-roster] Checking confirmed lineups across {len(games)} games...")
 
+    # Only pull from games where lineups are officially posted
+    confirmed_game_ids = set()
+    for game in games:
+        if is_lineup_confirmed(game["game_id"], game["home_abbr"]) and \
+           is_lineup_confirmed(game["game_id"], game["away_abbr"]):
+            confirmed_game_ids.add(game["game_id"])
+        else:
+            print(
+                f"  [skip] {game['away_abbr']} @ {game['home_abbr']} "
+                f"— lineup not yet posted"
+            )
+
+    confirmed_games = [g for g in games if g["game_id"] in confirmed_game_ids]
+    print(f"\n[auto-roster] {len(confirmed_games)}/{len(games)} games confirmed")
+    print(f"[auto-roster] Scanning slots {slots} in confirmed games...\n")
+
+    if not confirmed_games:
+        print("  [warn] No confirmed lineups yet — try again later")
+        return []
+
+    games = confirmed_games
     hitters = []
     seen_ids = set()
 
