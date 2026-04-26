@@ -147,8 +147,27 @@ def step_enrich_matchups(hitters: list, date: str) -> list:
     if not enriched:
         _log("warn", "No hitters have games today")
         return []
-    _log("ok", f"{len(enriched)} hitters have games today")
-    return enriched
+
+    # Filter out hitters whose lineup hasn't been confirmed yet
+    confirmed = [
+        h for h in enriched
+        if "LINEUP_UNCONFIRMED" not in (h.notes or "")
+    ]
+    unconfirmed = [
+        h for h in enriched
+        if "LINEUP_UNCONFIRMED" in (h.notes or "")
+    ]
+
+    if unconfirmed:
+        _log(
+            "warn",
+            f"{len(unconfirmed)} hitters excluded — lineup not yet posted:"
+        )
+        for h in unconfirmed:
+            _log("info", f"  {h.name} ({h.team})")
+
+    _log("ok", f"{len(confirmed)} hitters have confirmed lineups")
+    return confirmed
 
 
 def step_fetch_stats(hitters: list) -> list:
