@@ -72,9 +72,11 @@ def _save_run_to_history(scored_hitters: list, date: str):
         except (json.JSONDecodeError, IOError):
             history = []
 
+    import os
     run_record = {
         "date":      date,
         "run_at":    datetime.datetime.now().isoformat(),
+        "run_label": os.getenv("RUN_LABEL", "manual"),
         "picks": [
             {
                 "name":       h.name,
@@ -270,8 +272,39 @@ def step_score(hitters: list, features_list: list) -> list:
     _divider("STEP 7: AI Scoring")
     if not CONFIG.get("anthropic_api_key"):
         _log("warn", "No Anthropic API key — using mock scoring")
+
+    # Load today's cached scores to avoid re-scoring hitters
+    # already scored in an earlier run today
+    today = datetime.date.today().isoformat()
+    daily_cache = CONFIG["cache_dir"] / f"scored_{today}.json"
+    cached_scores = {}
+
+    if daily_cache.exists():
+        try:
+            with open(daily_cache) as f:
+                cached = json.load(f)
+            cached_scores = {
+                p["name"].lower(): p
+                for p in cached
+                if p.get("score") is not None
+            }
+            _log("info", f"Loaded {len(cached_scores)} cached scores from earlier today")
+        except Exception as e:
+            _log("warn", f"Could not load daily cache: {e}")
+
+    # Apply cached scores before sending to Claude
+    if cached_scores:
+        for h in hitters:
+            if h.name.lower() in cached_scores:
+                c = cached_scores[h.name.lower()]
+                h.score      = c.get("score")
+                h.confidence = c.get("confidence")
+                h.reasoning  = c.get("reasoning")
+                h.key_factor = c.get("key_factor")
+                h.scored_at  = c.get("scored_at")
+
     scored = score_all_hitters(hitters, features_list)
-    return scored
+    return scored or []
 
 
 def step_filter_and_rank(scored: list) -> tuple[list, list]:
@@ -301,8 +334,25 @@ def step_filter_and_rank(scored: list) -> tuple[list, list]:
 def step_save(scored: list, date: str):
     """Step 9 — Save results to roster and history."""
     _divider("STEP 9: Save Results")
-    save_hitters(scored)
-    _log("ok", "Updated hitters.json with latest scores")
+
+    # Save manual roster hitters back to hitters.json
+    from src.storage import load_hitters as _load
+    manual_names = {h.name.lower() for h in _load()}
+    manual_scored = [h for h in scored if h.name.lower() in manual_names]
+    if manual_scored:
+        save_hitters(manual_scored)
+        _log("ok", "Updated hitters.json with latest scores")
+
+    # Save ALL scored hitters to daily cache so afternoon runs
+    # can skip re-scoring players already done this morning
+    daily_cache = CONFIG["cache_dir"] / f"scored_{date}.json"
+    with open(daily_cache, "w") as f:
+        json.dump(
+            [h.to_dict() for h in scored],
+            f, indent=2, default=str
+        )
+    _log("ok", f"Daily scores cached ({len(scored)} hitters) → {daily_cache.name}")
+
     _save_run_to_history(scored, date)
 
 
@@ -334,10 +384,14 @@ def run_pipeline(
     if date is None:
         date = datetime.date.today().isoformat()
 
+    import os
+    run_label = os.getenv("RUN_LABEL", "manual")
+
     _divider()
-    _log("step", f"STREAK·AI Pipeline — {date}")
+    _log("step", f"STREAK·AI Pipeline — {date} [{run_label}]")
     _log("info", f"Streak mode: {CONFIG.get('streak_mode', 'conservative')}")
     _log("info", f"Score threshold: {CONFIG.get('score_threshold', 65)}")
+    _log("info", f"Run: {run_label}")
     if dry_run:
         _log("warn", "DRY RUN — results will not be saved or emailed")
     _divider()
