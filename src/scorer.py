@@ -306,22 +306,22 @@ def _fallback_score(hitter: Hitter, features: dict) -> dict:
 def score_all_hitters(hitters: list[Hitter], features_list: list[dict]) -> list[Hitter]:
     """
     Score an entire roster of hitters.
-
-    Args:
-        hitters:       list of Hitter objects
-        features_list: list of feature dicts in the same order
-
-    Returns:
-        List of Hitter objects with score, confidence, reasoning,
-        key_factor fields populated. Sorted by score descending.
+    Skips hitters already scored today to avoid redundant API calls.
     """
     if not hitters:
         return []
 
+    today = datetime.date.today().isoformat()
     print(f"\n[scorer] Scoring {len(hitters)} hitters with Claude AI...\n")
     scored = []
 
     for hitter, features in zip(hitters, features_list):
+        # Skip if already scored today
+        if hitter.scored_at and hitter.scored_at[:10] == today and hitter.score is not None:
+            print(f"  [skip] {hitter.name} already scored today ({hitter.score}/100)")
+            scored.append(hitter)
+            continue
+
         result = score_hitter(hitter, features)
 
         hitter.score      = result["score"]
@@ -332,11 +332,9 @@ def score_all_hitters(hitters: list[Hitter], features_list: list[dict]) -> list[
 
         scored.append(hitter)
 
-        # Small delay between API calls to avoid rate limiting
         if CONFIG.get("anthropic_api_key"):
             time.sleep(0.5)
 
-    # Sort by score descending
     scored.sort(key=lambda h: h.score or 0, reverse=True)
 
     print(f"\n[scorer] Scoring complete. Rankings:")

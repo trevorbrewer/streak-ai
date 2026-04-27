@@ -2,7 +2,10 @@ name: Daily Picks Pipeline
 
 on:
   schedule:
-    - cron: '0 14 * * *'
+    - cron: '0 15 * * *'
+    - cron: '0 17 * * *'
+    - cron: '0 21 * * *'
+    - cron: '0 1 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
@@ -17,6 +20,10 @@ on:
         description: 'Date to run for (YYYY-MM-DD, blank = today)'
         required: false
         default: ''
+      run_label:
+        description: 'Label for this run (e.g. morning, afternoon)'
+        required: false
+        default: 'manual'
 
 jobs:
   run-picks:
@@ -44,6 +51,22 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Set run label
+        id: label
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" = "15" ]; then
+            echo "label=11am-ET" >> $GITHUB_OUTPUT
+          elif [ "$HOUR" = "17" ]; then
+            echo "label=1pm-ET" >> $GITHUB_OUTPUT
+          elif [ "$HOUR" = "21" ]; then
+            echo "label=5pm-ET" >> $GITHUB_OUTPUT
+          elif [ "$HOUR" = "01" ]; then
+            echo "label=9pm-ET" >> $GITHUB_OUTPUT
+          else
+            echo "label=${{ github.event.inputs.run_label || 'manual' }}" >> $GITHUB_OUTPUT
+          fi
+
       - name: Run picks pipeline
         env:
           ANTHROPIC_API_KEY:   ${{ secrets.ANTHROPIC_API_KEY }}
@@ -53,17 +76,19 @@ jobs:
           EMAIL_RECIPIENTS:    ${{ secrets.EMAIL_RECIPIENTS }}
           SCORE_THRESHOLD:     ${{ vars.SCORE_THRESHOLD }}
           STREAK_MODE:         ${{ vars.STREAK_MODE }}
+          RUN_LABEL:           ${{ steps.label.outputs.label }}
         run: |
-          ARGS="--run-now"
+          ARGS="--run-now --skip-statcast"
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
           fi
-          if [ "${{ github.event.inputs.skip_statcast }}" = "true" ]; then
-            ARGS="$ARGS --skip-statcast"
+          if [ "${{ github.event.inputs.skip_statcast }}" = "false" ]; then
+            ARGS="${ARGS/--skip-statcast/}"
           fi
           if [ -n "${{ github.event.inputs.date }}" ]; then
             ARGS="$ARGS --date ${{ github.event.inputs.date }}"
           fi
+          echo "Run label: ${{ steps.label.outputs.label }}"
           echo "Running: python3 streak_ai.py $ARGS"
           python3 streak_ai.py $ARGS
 
@@ -72,14 +97,14 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "STREAK-AI Bot"
           git add -A data/ || true
-          git diff --staged --quiet || git commit -m "data: picks for $(date +'%Y-%m-%d') [skip ci]"
+          git diff --staged --quiet || git commit -m "data: ${{ steps.label.outputs.label }} picks for $(date +'%Y-%m-%d') [skip ci]"
           git push || true
 
       - name: Upload run artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-run-${{ github.run_id }}
+          name: pipeline-${{ steps.label.outputs.label }}-${{ github.run_id }}
           path: |
             data/scores_history.json
             data/hitters.json

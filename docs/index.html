@@ -645,9 +645,10 @@ async function init() {
         hour: 'numeric', minute: '2-digit'
       })
     : latest.date;
+  const runLabel = latest.run_label ? ` · ${latest.run_label}` : '';
   document.getElementById('last-updated').textContent =
-    `Last run: ${runAt}`;
-
+    `Last run: ${runAt}${runLabel}`;
+    
   renderStats(history, ALL_PICKS);
   renderPicks(ALL_PICKS, 'all');
   renderHistory(history);
