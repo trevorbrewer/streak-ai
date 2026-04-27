@@ -212,7 +212,11 @@ def get_batter_recent_stats(name: str) -> dict:
         print(f"  [warn] Game log fetch failed for {name}: {e}")
         return {}
 
-    splits = data.get("stats", [{}])[0].get("splits", [])
+    stats_list = data.get("stats", [])
+    if not stats_list:
+        print(f"  [warn] No game log stats returned for {name}")
+        return {}
+    splits = stats_list[0].get("splits", [])
     if not splits:
         print(f"  [warn] No game log data for {name}")
         return {}
