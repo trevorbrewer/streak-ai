@@ -177,7 +177,9 @@ def get_batter_season_stats(name: str, season: int = None) -> dict:
 
 def get_batter_recent_stats(name: str) -> dict:
     """
-    Get last 7, 14, and 30 day batting averages for a player.
+    Get last 7, 14, and 30 game batting averages for a player.
+    Uses game log (actual games played) instead of calendar date
+    ranges for accuracy.
 
     Returns dict with: l7, l14, l30
     Returns {} if not available.
@@ -194,47 +196,60 @@ def get_batter_recent_stats(name: str) -> dict:
         return {}
 
     player_id = player["id"]
-    today = datetime.date.today()
+    season = CURRENT_SEASON
+
+    try:
+        url = f"{MLB_API}/people/{player_id}/stats"
+        params = {
+            "stats": "gameLog",
+            "group": "hitting",
+            "season": season,
+        }
+        r = requests.get(url, params=params, timeout=10)
+        r.raise_for_status()
+        data = r.json()
+    except Exception as e:
+        print(f"  [warn] Game log fetch failed for {name}: {e}")
+        return {}
+
+    stats_list = data.get("stats", [])
+    if not stats_list:
+        print(f"  [warn] No game log stats returned for {name}")
+        return {}
+    splits = stats_list[0].get("splits", [])
+    if not splits:
+        print(f"  [warn] No game log data for {name}")
+        return {}
+
     result = {}
 
     for days, key in [(7, "l7"), (14, "l14"), (30, "l30")]:
-        start = today - datetime.timedelta(days=days)
-        data = _get(
-            f"{MLB_API}/people/{player_id}",
-            params={
-                "hydrate": (
-                    f"stats(group=hitting,type=byDateRange,"
-                    f"startDate={start},endDate={today},"
-                    f"season={CURRENT_SEASON})"
-                )
-            }
-        )
-        if not data or not data.get("people"):
+        games = splits[-days:] if len(splits) >= days else splits
+        if not games:
             continue
 
-        stats_groups = data["people"][0].get("stats", [])
-        if not stats_groups:
-            continue
-
-        splits = stats_groups[0].get("splits", [])
-        if not splits:
-            continue
-
-        s = splits[-1].get("stat", {})
-        avg = s.get("avg")
-        if avg and avg != "-":
+        total_h  = 0
+        total_ab = 0
+        for g in games:
+            s = g.get("stat", {})
             try:
-                result[key] = round(float(avg), 3)
+                total_h  += int(s.get("hits", 0) or 0)
+                total_ab += int(s.get("atBats", 0) or 0)
             except (ValueError, TypeError):
-                pass
+                continue
 
-        # Small delay to be respectful to the free API
-        time.sleep(0.2)
+        if total_ab >= 3:
+            avg = round(total_h / total_ab, 3)
+            # Sanity check
+            if 0.000 <= avg <= 0.600:
+                result[key] = avg
+            else:
+                print(f"  [warn] {key} avg {avg} out of range — skipping")
 
     if result:
         with open(cache_file, "w") as f:
             json.dump(result, f, indent=2)
-        print(f"  [ok] Recent stats for {name}: {result}")
+        print(f"  [ok] Recent stats for {name} (game log): {result}")
 
     return result
 
