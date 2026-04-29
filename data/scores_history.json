@@ -9243,5 +9243,397 @@
         "reasoning": "Clemens presents multiple red flags with a dismal .130 season average and .167 BABIP indicating poor contact quality rather than just bad luck. His 28.9 contact score and facing a same-handed pitcher without platoon advantage creates an unfavorable setup. While he's theoretically due for BABIP regression, his underlying metrics don't support sustainable improvement."
       }
     ]
+  },
+  {
+    "date": "2026-04-29",
+    "run_at": "2026-04-29T15:58:59.212224",
+    "run_label": "11am-ET",
+    "picks": [
+      {
+        "name": "Miguel Vargas",
+        "team": "CWS",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Rate Field",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak combined with favorable platoon matchup against struggling left-handed pitcher",
+        "reasoning": "Vargas presents a compelling case with multiple converging advantages. His hot recent form (+119 points above season average over last 7 days) suggests timing and confidence are peaking. The platoon advantage against LHP Kikuchi is significant, especially given Kikuchi's poor 6.21 ERA and high pitcher quality score of 100 indicating vulnerability. The BABIP regression factor (-0.092 below expected) suggests Vargas is due for positive variance on balls in play."
+      },
+      {
+        "name": "Munetaka Murakami",
+        "team": "CWS",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Rate Field",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Favorable platoon matchup against struggling left-handed pitcher with 6.21 ERA",
+        "reasoning": "Murakami presents a strong matchup opportunity against struggling lefty Kikuchi who has a 6.21 ERA. The platoon advantage is significant for a right-handed batter, and his BABIP suggests he's been unlucky and due for positive regression. While his season average is modest at .241, his recent form shows slight improvement and the pitcher quality score of 100 indicates a very favorable matchup."
+      },
+      {
+        "name": "Josh Jung",
+        "team": "TEX",
+        "opp": "NYY",
+        "pitcher": "Elmer Rodr\u00edguez",
+        "park": "Globe Life Field",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Hot recent form with .400 average over last 7 days, significantly above his season norm",
+        "reasoning": "Jung presents a solid pick with strong recent form hitting .400 over the last 7 days and excellent season numbers (.320 AVG). His momentum is accelerating and he bats at the top of the order, providing more plate appearances. However, he's facing a right-handed pitcher as a right-handed batter (no platoon advantage) and his BABIP suggests some luck that could regress."
+      },
+      {
+        "name": "Aaron Judge",
+        "team": "NYY",
+        "opp": "TEX",
+        "pitcher": "Nathan Eovaldi",
+        "park": "Globe Life Field",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Hot recent form significantly outpacing season average with favorable pitcher matchup",
+        "reasoning": "Judge presents a strong pick with multiple favorable factors aligning. His red-hot recent form (.364 over last 7 days) significantly above his season average, combined with facing a struggling pitcher (5.79 ERA) creates an advantageous matchup. The BABIP regression potential (-0.033 below expected) suggests he's due for better luck on balls in play. However, the same-handed matchup without platoon advantage and conservative streak mode requirements temper the ceiling slightly."
+      },
+      {
+        "name": "Chase Meidroth",
+        "team": "CWS",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Rate Field",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage against struggling left-handed pitcher",
+        "reasoning": "Meidroth has a clear platoon advantage against LHP Kikuchi, whose 6.21 ERA and pitcher quality score of 100 indicate vulnerability. The hitter is at the top of the batting order and shows positive momentum with recent form slightly above season average. However, his modest .257 season average and BABIP regression concerns create some downside risk."
+      },
+      {
+        "name": "Mike Trout",
+        "team": "LAA",
+        "opp": "CWS",
+        "pitcher": "Erick Fedde",
+        "park": "Rate Field",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak combined with BABIP regression potential",
+        "reasoning": "Trout shows encouraging recent momentum with a .292 average over the last 7 days, significantly outpacing his season .248 mark. His BABIP of .246 suggests he's been unlucky and due for positive regression. However, the same-handed matchup against Fedde creates challenges, and Trout's overall season contact metrics are concerning despite his elite plate discipline."
+      },
+      {
+        "name": "Julio Rodr\u00edguez",
+        "team": "SEA",
+        "opp": "MIN",
+        "pitcher": "Taj Bradley",
+        "park": "Target Field",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Hot recent form with .355 average in last 7 days, well above season average",
+        "reasoning": "Julio Rodr\u00edguez is showing strong recent form with a .355 average over the last 7 days, representing a significant +0.099 bump above his season norm. His momentum score of 84.8 and accelerating trend are encouraging signs. However, facing same-handed pitching without platoon advantage and a quality pitcher with a 2.91 ERA creates headwinds. The park factor is slightly negative for hits at Target Field."
+      },
+      {
+        "name": "Cal Raleigh",
+        "team": "SEA",
+        "opp": "MIN",
+        "pitcher": "Taj Bradley",
+        "park": "Target Field",
+        "score": 58,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak (.310 L7) combined with significant BABIP bad luck due for positive regression",
+        "reasoning": "Raleigh presents a mixed profile with clear positives and negatives. His brutal .197 season average is heavily influenced by BABIP bad luck (.224 vs league average ~.290), suggesting regression to better numbers. The recent hot streak (.310 over L7) shows he's already finding his swing, and momentum is accelerating. However, facing a same-handed pitcher with no platoon advantage and Taj Bradley's solid 2.91 ERA creates headwinds."
+      },
+      {
+        "name": "Josh Naylor",
+        "team": "SEA",
+        "opp": "MIN",
+        "pitcher": "Taj Bradley",
+        "park": "Target Field",
+        "score": 58,
+        "confidence": "medium",
+        "key_factor": "Hot recent form with significant BABIP regression potential",
+        "reasoning": "Naylor is riding a hot 7-day streak (.444 avg) that's significantly above his poor season average, suggesting positive regression potential. His BABIP is notably unlucky at .233, indicating he's due for better hit luck. However, facing a quality RHP (2.91 ERA) without platoon advantage and his overall weak season numbers (.220 avg) create meaningful downside risk."
+      },
+      {
+        "name": "Yandy D\u00edaz",
+        "team": "TB",
+        "opp": "CLE",
+        "pitcher": "Gavin Williams",
+        "park": "Progressive Field",
+        "score": 52,
+        "confidence": "medium",
+        "key_factor": "Strong contact profile (.324 AVG) providing solid floor despite matchup disadvantages",
+        "reasoning": "D\u00edaz brings strong contact skills with a .324 average and excellent plate discipline (.419 OBP), but faces meaningful headwinds today. The same-handed matchup against Williams eliminates platoon advantage, and his elevated .352 BABIP suggests some regression risk. Progressive Field's slight pitcher-friendly lean and Williams' decent 3.28 ERA create additional challenges for a conservative streak approach."
+      },
+      {
+        "name": "Ryan Jeffers",
+        "team": "MIN",
+        "opp": "SEA",
+        "pitcher": "George Kirby",
+        "park": "Target Field",
+        "score": 52,
+        "confidence": "medium",
+        "key_factor": "Quality pitcher matchup against George Kirby (2.97 ERA, 39.4 pitcher quality score)",
+        "reasoning": "Jeffers shows solid season numbers (.282/.414/.465) and slight positive momentum over 7 days, but faces a challenging matchup against quality pitcher George Kirby. The same-handed matchup (R vs R) eliminates platoon advantage, and Target Field's slight negative park factor for hits doesn't help. His pre-AI composite score of 50.3 reflects these mixed signals, with decent contact ability offset by matchup difficulty."
+      },
+      {
+        "name": "Junior Caminero",
+        "team": "TB",
+        "opp": "CLE",
+        "pitcher": "Gavin Williams",
+        "park": "Progressive Field",
+        "score": 48,
+        "confidence": "medium",
+        "key_factor": "BABIP regression potential (.244 vs likely true talent suggests due for hits)",
+        "reasoning": "Caminero faces a same-handed matchup against a solid RHP with a 3.28 ERA, eliminating platoon advantage. His .244 BABIP suggests he's been unlucky and due for regression, but his overall .257 average indicates inconsistent contact quality. The slight uptick in recent form (.280 over L7) and momentum acceleration provide some optimism, but the unfavorable park factor and lack of platoon edge create headwinds."
+      },
+      {
+        "name": "Corey Seager",
+        "team": "TEX",
+        "opp": "NYY",
+        "pitcher": "Elmer Rodr\u00edguez",
+        "park": "Globe Life Field",
+        "score": 48,
+        "confidence": "medium",
+        "key_factor": "BABIP regression potential with .239 BABIP being 61 points below expected",
+        "reasoning": "Seager's season-long struggles (.213 AVG, .239 BABIP) are concerning, but there are some positives emerging. His recent 7-day form shows improvement (.241 vs .213 season), and he's significantly unlucky with BABIP suggesting positive regression is due. The matchup against an unproven pitcher (ERA N/A) provides opportunity, though the same-hand disadvantage against the RHP works against him."
+      },
+      {
+        "name": "Ben Rice",
+        "team": "NYY",
+        "opp": "TEX",
+        "pitcher": "Nathan Eovaldi",
+        "park": "Globe Life Field",
+        "score": 48,
+        "confidence": "medium",
+        "key_factor": "Favorable matchup against high-ERA pitcher (5.79) provides the primary opportunity",
+        "reasoning": "Rice shows solid season numbers (.309 AVG) and gets a favorable matchup against struggling Eovaldi (5.79 ERA), but several factors limit upside. The same-handed matchup (R vs R) removes platoon advantage, and his recent form has cooled to .280 over the last week. The BABIP luck indicator suggests potential regression coming, and early season small sample warnings apply to his strong rate stats."
+      },
+      {
+        "name": "Brandon Nimmo",
+        "team": "TEX",
+        "opp": "NYY",
+        "pitcher": "Elmer Rodr\u00edguez",
+        "park": "Globe Life Field",
+        "score": 43,
+        "confidence": "medium",
+        "key_factor": "Same-handed matchup eliminating platoon advantage combined with BABIP regression risk",
+        "reasoning": "Nimmo faces a challenging spot with multiple red flags. The same-handed matchup against a right-handed pitcher eliminates his platoon advantage, while his recent form shows a slight decline over the past week. His BABIP luck indicator suggests he's due for negative regression, and the composite pre-AI score of 45.5 reflects mixed fundamentals. The conservative streak mode further penalizes this borderline situation."
+      },
+      {
+        "name": "Josh Bell",
+        "team": "MIN",
+        "opp": "SEA",
+        "pitcher": "George Kirby",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Facing quality same-handed pitcher George Kirby without platoon advantage",
+        "reasoning": "Bell faces a challenging matchup against quality RHP Kirby despite recent hot streak. His BABIP appears inflated at .364 suggesting regression risk, while poor contact metrics (27% hard hit, 83.4 mph exit velo) indicate underlying weakness. The lack of platoon advantage and pitcher-friendly park factors further dampen his hit probability."
+      },
+      {
+        "name": "Trevor Larnach",
+        "team": "MIN",
+        "opp": "SEA",
+        "pitcher": "George Kirby",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Quality pitcher matchup with George Kirby offering no platoon disadvantage",
+        "reasoning": "Larnach shows solid season numbers (.313 AVG) but faces several headwinds today. George Kirby is a quality pitcher (2.97 ERA, 39.4 quality score) with no platoon disadvantage against the right-handed Larnach. The BABIP regression risk (.333 BABIP marked as lucky) and modest contact metrics (84.6 mph exit velocity, 29.2% hard hit rate) suggest some performance decline may be coming. Target Field's slight pitcher-friendly lean adds another small negative."
+      },
+      {
+        "name": "Matt Wallner",
+        "team": "MIN",
+        "opp": "SEA",
+        "pitcher": "George Kirby",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Same-handed disadvantage against quality pitcher George Kirby",
+        "reasoning": "Wallner presents a challenging profile with a low .224 season average and unfavorable same-handed matchup against quality righty Kirby. While his recent 7-day hot streak (.267) provides some optimism, his elevated BABIP (.381) suggests regression risk rather than sustainable improvement. His below-average contact metrics (83.3 mph exit velocity, 28.7% hard hit rate) against a pitcher with strong command create additional concerns."
+      },
+      {
+        "name": "Chase DeLauter",
+        "team": "CLE",
+        "opp": "TB",
+        "pitcher": "Drew Rasmussen",
+        "park": "Progressive Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup against Drew Rasmussen significantly limits upside",
+        "reasoning": "DeLauter shows promising recent form (.320 over last 7 days) and is due for BABIP regression with significant negative luck (-0.065). However, facing elite pitcher Drew Rasmussen (2.45 ERA, quality score 29) creates a challenging matchup. The same-handed platoon disadvantage and unfavorable park factors compound the difficulty."
+      },
+      {
+        "name": "Austin Hays",
+        "team": "CWS",
+        "opp": "LAA",
+        "pitcher": "Yusei Kikuchi",
+        "park": "Rate Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage against struggling LHP Kikuchi (6.21 ERA)",
+        "reasoning": "Hays presents a challenging case with a dreadful .206 season average but faces a struggling left-handed pitcher where he has platoon advantage. Kikuchi's 6.21 ERA and 100 pitcher quality score (worst tier) create opportunity, but Hays' poor contact metrics and low BABIP suggest limited upside. The conservative streak mode heavily penalizes this type of low-floor hitter despite the favorable matchup."
+      },
+      {
+        "name": "Zach Neto",
+        "team": "LAA",
+        "opp": "CWS",
+        "pitcher": "Erick Fedde",
+        "park": "Rate Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Poor season batting average (.240) combined with lack of platoon advantage vs RHP Fedde",
+        "reasoning": "Neto faces significant challenges today with a poor season average (.240) and recent form trending slightly down. The same-handed matchup against Fedde eliminates any platoon advantage, while his elevated BABIP suggests potential regression ahead. His position atop the batting order provides some opportunity, but the overall profile points to a risky selection."
+      },
+      {
+        "name": "Yo\u00e1n Moncada",
+        "team": "LAA",
+        "opp": "CWS",
+        "pitcher": "Erick Fedde",
+        "park": "Rate Field",
+        "score": 42,
+        "confidence": "low",
+        "key_factor": "Recent hot streak (.333 over last 7 days) providing temporary momentum despite poor season numbers",
+        "reasoning": "Moncada presents a challenging case with his terrible .190 season average but strong recent 7-day hot streak at .333. The early season small sample flag suggests his overall numbers may not be reliable yet. However, he faces an unfavorable same-handed matchup against a decent pitcher (3.42 ERA), and his BABIP suggests he's not particularly unlucky. The momentum is encouraging but insufficient to overcome fundamental concerns."
+      },
+      {
+        "name": "Jorge Soler",
+        "team": "LAA",
+        "opp": "CWS",
+        "pitcher": "Erick Fedde",
+        "park": "Rate Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Same-handed matchup against solid right-handed pitcher with no platoon advantage",
+        "reasoning": "Soler presents a borderline case with mixed signals. His .235 average and same-handed matchup against Fedde create headwinds, though the pitcher isn't elite quality. The slight park boost and accelerating momentum provide modest positives, but his overall contact metrics and matchup fundamentals remain concerning. In conservative streak mode, the lack of clear advantages makes this a risky proposition."
+      },
+      {
+        "name": "Trent Grisham",
+        "team": "NYY",
+        "opp": "TEX",
+        "pitcher": "Nathan Eovaldi",
+        "park": "Globe Life Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "BABIP regression potential - .152 BABIP is 148 points below league average, indicating extreme bad luck",
+        "reasoning": "Grisham presents a challenging case with extremely poor season batting average (.157) but faces a favorable matchup against struggling pitcher Eovaldi (5.79 ERA). His severely depressed BABIP (.152) suggests he's been unlucky and due for regression, while the top-of-order placement provides multiple plate appearance opportunities. However, the same-handed matchup without platoon advantage and historically poor contact quality create significant risk."
+      },
+      {
+        "name": "Cody Bellinger",
+        "team": "NYY",
+        "opp": "TEX",
+        "pitcher": "Nathan Eovaldi",
+        "park": "Globe Life Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "BABIP regression potential combined with pitcher struggling (5.79 ERA)",
+        "reasoning": "Bellinger faces a favorable matchup against struggling RHP Eovaldi (5.79 ERA) and is due for BABIP regression with unlucky batted ball results. However, his season-long struggles (.240 AVG) and ice-cold recent form (.120 over last 7 days) create significant floor risk. The same-handed matchup without platoon advantage and low contact metrics further limit his upside."
+      },
+      {
+        "name": "Byron Buxton",
+        "team": "MIN",
+        "opp": "SEA",
+        "pitcher": "George Kirby",
+        "park": "Target Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Poor season batting average (.214) combined with no platoon advantage against quality RHP Kirby",
+        "reasoning": "Buxton faces significant challenges with a .214 season average and poor contact metrics (40.5 contact score) against quality pitcher George Kirby. The same-handed matchup offers no platoon advantage, and Target Field's slight pitcher-friendly park factor (0.97) doesn't help. While his momentum score shows some acceleration and he bats atop the order, the combination of poor season performance and tough matchup creates substantial risk."
+      },
+      {
+        "name": "Jos\u00e9 Ram\u00edrez",
+        "team": "CLE",
+        "opp": "TB",
+        "pitcher": "Drew Rasmussen",
+        "park": "Progressive Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with Drew Rasmussen (pitcher quality score 29.0)",
+        "reasoning": "Ram\u00edrez faces an elite pitcher in Drew Rasmussen (2.45 ERA) with no platoon advantage as a right-handed batter. His .221 season average and .211 BABIP suggest he's been unlucky and due for regression, but his recent 7-day form (.192) shows continued struggles. The conservative streak mode heavily penalizes this elite pitching matchup despite the potential BABIP bounce-back."
+      },
+      {
+        "name": "Kyle Manzardo",
+        "team": "CLE",
+        "opp": "TB",
+        "pitcher": "Drew Rasmussen",
+        "park": "Progressive Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with Drew Rasmussen (2.45 ERA) against struggling hitter",
+        "reasoning": "Manzardo faces a difficult matchup against elite pitcher Drew Rasmussen with no platoon advantage as a right-handed batter. His .193 season average is concerning despite recent uptick to .235 over last 7 games. The momentum is encouraging but Rasmussen's 2.45 ERA and elite status create significant headwinds in conservative mode."
+      },
+      {
+        "name": "Jonathan Aranda",
+        "team": "TB",
+        "opp": "CLE",
+        "pitcher": "Gavin Williams",
+        "park": "Progressive Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "No platoon advantage against quality same-handed pitcher",
+        "reasoning": "Aranda faces a challenging matchup against a quality right-handed pitcher without platoon advantage, compounded by his poor .229 season average and extremely low .239 BABIP suggesting weak contact quality. While he's significantly unlucky on balls in play and showing slight recent improvement, the same-handed matchup against Williams (3.28 ERA) in a pitcher-friendly park creates multiple headwinds. The conservative streak mode heavily penalizes this type of risky spot."
+      },
+      {
+        "name": "Joc Pederson",
+        "team": "TEX",
+        "opp": "NYY",
+        "pitcher": "Elmer Rodr\u00edguez",
+        "park": "Globe Life Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Recent cold streak showing -0.036 decline from already poor season average",
+        "reasoning": "Pederson presents a challenging case with his poor .224 season average and recent cold streak (.188 over last 7 days). The same-handed matchup against Rodriguez offers no platoon advantage, and his below-average contact score (41.2) suggests quality of contact issues. While Globe Life Field is pitcher-friendly and Rodriguez is unproven, the composite indicators point to significant risk."
+      },
+      {
+        "name": "Chandler Simpson",
+        "team": "TB",
+        "opp": "CLE",
+        "pitcher": "Gavin Williams",
+        "park": "Progressive Field",
+        "score": 35,
+        "confidence": "medium",
+        "key_factor": "Recent cold streak of 0.200 over last 7 days, significantly below season average",
+        "reasoning": "Simpson faces significant headwinds with his recent cold streak (0.200 over L7) and same-handed matchup against Williams offering no platoon advantage. His BABIP regression risk and unfavorable park factors compound the concerns. While his season average provides some floor, the early season sample size warning and poor recent form in conservative streak mode justify caution."
+      },
+      {
+        "name": "Steven Kwan",
+        "team": "CLE",
+        "opp": "TB",
+        "pitcher": "Drew Rasmussen",
+        "park": "Progressive Field",
+        "score": 32,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher Drew Rasmussen (2.45 ERA) in same-handed matchup",
+        "reasoning": "Kwan faces multiple headwinds with his struggling .220 average and cold recent form against elite pitcher Rasmussen (2.45 ERA). While he's historically shown strong contact skills and BABIP suggests he's been unlucky (.245 vs likely talent level), the same-handed matchup against a top-tier RHP in conservative mode creates significant risk. The early season small sample and top-of-order position provide minor positives, but the pitcher quality and recent struggles dominate the evaluation."
+      },
+      {
+        "name": "Luke Keaschall",
+        "team": "MIN",
+        "opp": "SEA",
+        "pitcher": "George Kirby",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Poor recent form (.160 L7) combined with weak contact quality against quality pitcher",
+        "reasoning": "Keaschall presents multiple red flags with a .193 season average that's actually worsening (.160 over last 7 days). His poor contact quality (82.1 mph exit velocity, 26% hard hit rate) against a quality pitcher like Kirby creates a very challenging matchup. While he's due for some BABIP regression (.204 vs likely true talent around .300), the combination of poor form, weak contact, and facing a good pitcher in conservative mode makes this a clear avoid."
+      },
+      {
+        "name": "J.P. Crawford",
+        "team": "SEA",
+        "opp": "MIN",
+        "pitcher": "Taj Bradley",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "medium",
+        "key_factor": "Extremely poor season batting average (.182) combined with weak contact quality metrics",
+        "reasoning": "Crawford presents significant red flags with a brutal .182 season average and .217 BABIP suggesting poor contact quality rather than just bad luck. While he's BABIP unlucky theoretically, his overall contact metrics are poor (33.6 score) and he faces an above-average pitcher in Bradley. The platoon disadvantage (RHB vs RHP) adds another layer of concern in a pitcher-friendly park."
+      },
+      {
+        "name": "Kody Clemens",
+        "team": "MIN",
+        "opp": "SEA",
+        "pitcher": "George Kirby",
+        "park": "Target Field",
+        "score": 22,
+        "confidence": "high",
+        "key_factor": "Extremely poor season performance (.130 AVG) combined with weak contact metrics against quality same-handed pitching",
+        "reasoning": "Clemens presents a perfect storm of negative factors. His .130 season average with a catastrophically low .167 BABIP suggests extremely poor contact quality rather than just bad luck. Facing a same-handed quality pitcher like Kirby (2.97 ERA) without platoon advantage compounds the difficulty. His 31.8% hard hit rate and 86.4 mph exit velocity confirm weak contact skills."
+      }
+    ]
   }
 ]
