@@ -13381,5 +13381,309 @@
         "reasoning": "Alonso faces a nightmare matchup against elite pitcher Will Warren while in brutal cold form (.154 over last 7 days). His .198 season average and heavily suppressed .241 BABIP suggest both poor performance and some bad luck, but the same-handed disadvantage against a top-tier RHP negates BABIP regression hope. The conservative streak mode heavily penalizes this elite pitcher matchup given Alonso's contact struggles."
       }
     ]
+  },
+  {
+    "date": "2026-05-02",
+    "run_at": "2026-05-02T16:46:59.346597",
+    "run_label": "manual",
+    "picks": [
+      {
+        "name": "Vladimir Guerrero Jr.",
+        "team": "TOR",
+        "opp": "MIN",
+        "pitcher": "Connor Prielipp",
+        "park": "Target Field",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Hot recent form with platoon advantage against left-handed pitching",
+        "reasoning": "Guerrero Jr. presents a solid pick with multiple moderate advantages. His excellent .342 season average combined with hot recent form (.417 over last 7 days) provides a strong foundation. The platoon advantage against lefty Prielipp is meaningful, though the pitcher's decent 4.00 ERA and moderate quality score temper expectations. The high BABIP suggests some luck regression risk, but his strong contact profile helps maintain a decent floor."
+      },
+      {
+        "name": "Ildemaro Vargas",
+        "team": "ARI",
+        "opp": "CHC",
+        "pitcher": "Shota Imanaga",
+        "park": "Wrigley Field",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak (.500 L7) combined with platoon advantage against LHP",
+        "reasoning": "Vargas presents a strong offensive profile with a .404 season average and excellent recent form at .500 over the last 7 days. The platoon advantage against lefty Imanaga is significant, and his momentum is clearly accelerating. However, the elevated BABIP of .416 suggests some regression risk, and Imanaga's solid 2.88 ERA indicates quality pitching that could challenge even hot hitters."
+      },
+      {
+        "name": "Aaron Judge",
+        "team": "NYY",
+        "opp": "BAL",
+        "pitcher": "Kyle Bradish",
+        "park": "Yankee Stadium",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Hot recent form (+0.085 above season avg in L7) with momentum accelerating",
+        "reasoning": "Judge is showing strong recent form with a .348 average over the last 7 days, significantly above his season mark. However, facing same-handed pitching (Bradish RHP) eliminates platoon advantage, and Bradish represents decent quality opposition. The favorable park factor at Yankee Stadium and Judge's elite power upside provide solid floor despite the challenging matchup."
+      },
+      {
+        "name": "Adley Rutschman",
+        "team": "BAL",
+        "opp": "NYY",
+        "pitcher": "Ryan Weathers",
+        "park": "Yankee Stadium",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Hot streak combined with favorable platoon matchup (RHB vs LHP)",
+        "reasoning": "Rutschman presents a solid pick with his strong .333 season average and hot recent form (.379 over last 7 days). The platoon advantage against lefty Weathers is meaningful, and his momentum is clearly accelerating. However, the slight BABIP luck suggests some regression risk, and Weathers has been reasonably effective with a 3.21 ERA."
+      },
+      {
+        "name": "Ryan Jeffers",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Target Field",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Hot streak momentum with .385 average in last 7 days",
+        "reasoning": "Jeffers shows strong recent momentum with a .385 average over the last 7 days, significantly outpacing his solid .301 season mark. His .344 BABIP suggests potential regression risk, but the hot streak momentum and decent contact score provide a foundation. Facing same-handed pitching without platoon advantage limits upside, while Target Field's slightly pitcher-friendly profile adds minor headwinds."
+      },
+      {
+        "name": "Taylor Ward",
+        "team": "BAL",
+        "opp": "NYY",
+        "pitcher": "Ryan Weathers",
+        "park": "Yankee Stadium",
+        "score": 67,
+        "confidence": "medium",
+        "key_factor": "Hot recent form (.350 L7) combined with platoon advantage against LHP",
+        "reasoning": "Ward brings solid fundamentals with a .294 average and strong .426 OBP, plus he's riding hot recent form at .350 over his last 7 games. The platoon advantage against lefty Weathers is meaningful, and batting at the top of the order provides more opportunities. However, his elevated .358 BABIP suggests some regression risk, and Weathers has been effective with a 3.21 ERA."
+      },
+      {
+        "name": "Alex Bregman",
+        "team": "CHC",
+        "opp": "ARI",
+        "pitcher": "Ryne Nelson",
+        "park": "Wrigley Field",
+        "score": 67,
+        "confidence": "medium",
+        "key_factor": "Favorable matchup against struggling pitcher Ryne Nelson with 7.71 ERA",
+        "reasoning": "Bregman faces a struggling pitcher in Ryne Nelson (7.71 ERA) who represents a clear favorable matchup despite the right-on-right platoon disadvantage. His recent form shows stability around his season average, and while his .258 batting average isn't elite, the pitcher quality score of 100 indicates Nelson is highly hittable. Wrigley Field's slight hitter-friendly factor (1.05) provides a minor boost, and his BABIP suggests neither luck nor regression concerns."
+      },
+      {
+        "name": "Ben Rice",
+        "team": "NYY",
+        "opp": "BAL",
+        "pitcher": "Kyle Bradish",
+        "park": "Yankee Stadium",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Hot recent form with .379 average over last 7 days while batting at top of order",
+        "reasoning": "Ben Rice shows strong seasonal numbers (.330 AVG) and hot recent form (+.049 above season average in L7), with momentum accelerating and batting atop the order. However, he faces a same-handed pitcher without platoon advantage, and his .365 BABIP suggests he's been lucky and due for regression. The matchup against Bradish (4.20 ERA) is neutral, neither particularly favorable nor challenging."
+      },
+      {
+        "name": "George Springer",
+        "team": "TOR",
+        "opp": "MIN",
+        "pitcher": "Connor Prielipp",
+        "park": "Target Field",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak combined with favorable platoon matchup against left-handed pitching",
+        "reasoning": "Springer presents a mixed but slightly favorable profile. His recent hot streak (.320 over last 7 days) and strong platoon advantage as a RHB vs LHP provide the primary upside. The momentum score of 85 indicates accelerating form, which is crucial for streak picks. However, his poor season average (.215) and below-average BABIP (.250) suggest underlying struggles that temper expectations."
+      },
+      {
+        "name": "Geraldo Perdomo",
+        "team": "ARI",
+        "opp": "CHC",
+        "pitcher": "Shota Imanaga",
+        "park": "Wrigley Field",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage as RHB vs LHP combined with hot recent form",
+        "reasoning": "Perdomo presents a solid pick with meaningful platoon advantage against lefty Imanaga and positive momentum from his recent hot streak. His BABIP unlucky status suggests potential positive regression, while batting atop the order provides maximum plate appearances. However, his season-long struggles (.245 AVG) and facing a quality pitcher with a 2.88 ERA create meaningful downside risk."
+      },
+      {
+        "name": "Gunnar Henderson",
+        "team": "BAL",
+        "opp": "NYY",
+        "pitcher": "Ryan Weathers",
+        "park": "Yankee Stadium",
+        "score": 58,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak (.276 L7) combined with platoon advantage and BABIP due for positive regression",
+        "reasoning": "Henderson shows encouraging recent form with a .276 average over the last 7 days, significantly above his struggling .207 season mark. His platoon advantage against LHP Weathers and severe BABIP bad luck (.235 vs likely true talent around .300) suggest positive regression is due. However, his season-long contact issues and Weathers' solid 3.21 ERA in conservative streak mode prevent a higher score."
+      },
+      {
+        "name": "Michael Busch",
+        "team": "CHC",
+        "opp": "ARI",
+        "pitcher": "Ryne Nelson",
+        "park": "Wrigley Field",
+        "score": 58,
+        "confidence": "medium",
+        "key_factor": "Facing extremely poor pitcher (7.71 ERA) with maximum pitcher quality score",
+        "reasoning": "Busch presents a solid opportunity against struggling RHP Ryne Nelson (7.71 ERA), with the pitcher quality score of 100 indicating a very favorable matchup. Despite poor season numbers (.203 AVG), he's showing slight recent improvement and is significantly unlucky on balls in play (BABIP .256 vs likely true talent). The conservative streak mode favors his top-of-order positioning and the fact he's due for positive BABIP regression."
+      },
+      {
+        "name": "Ernie Clement",
+        "team": "TOR",
+        "opp": "MIN",
+        "pitcher": "Connor Prielipp",
+        "park": "Target Field",
+        "score": 52,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage as RHB vs LHP providing modest edge",
+        "reasoning": "Clement presents a borderline case with mixed signals. His solid .302 season average and platoon advantage against LHP Connor Prielipp provide some upside. However, his recent cold streak (.231 over last 7 days) and the pitcher's decent 4.00 ERA create notable concerns. The conservative streak mode further emphasizes floor protection over ceiling, making this a cautious spot."
+      },
+      {
+        "name": "Mois\u00e9s Ballesteros",
+        "team": "CHC",
+        "opp": "ARI",
+        "pitcher": "Ryne Nelson",
+        "park": "Wrigley Field",
+        "score": 52,
+        "confidence": "medium",
+        "key_factor": "Extremely favorable pitcher matchup against struggling Ryne Nelson",
+        "reasoning": "Ballesteros faces a very hittable pitcher in Nelson (7.71 ERA, pitcher quality score 100) which creates a favorable matchup. However, his recent cold streak (.240 over L7 vs .324 season avg) and same-handed matchup without platoon advantage create meaningful concerns. The conservative streak mode further penalizes the risk factors despite the poor opposing pitcher."
+      },
+      {
+        "name": "Josh Bell",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Tough same-handed matchup against quality pitcher Dylan Cease",
+        "reasoning": "Bell faces a tough matchup against quality RHP Dylan Cease (2.87 ERA) with no platoon advantage as a right-handed batter. While his recent 7-day hot streak (.318) provides some optimism, his elevated BABIP (.364) suggests he's been lucky and due for regression. The combination of facing a strong pitcher with conservative streak mode requirements creates significant downside risk."
+      },
+      {
+        "name": "Trevor Larnach",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Facing quality RHP Dylan Cease without platoon advantage",
+        "reasoning": "Larnach faces a challenging matchup against quality RHP Dylan Cease without platoon advantage. While his .313 season average is solid, recent form shows slight decline and his BABIP suggests he's been somewhat lucky. The poor park factor at Target Field and low contact quality metrics create additional headwinds in conservative mode."
+      },
+      {
+        "name": "Matt Wallner",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Poor contact quality (42.3 score) combined with facing quality RHP without platoon advantage",
+        "reasoning": "Wallner faces a challenging matchup against quality RHP Dylan Cease with no platoon advantage and poor season-long contact metrics. His .224 AVG and 42.3 contact score indicate struggles making consistent contact. While recent form shows slight improvement (.267 L7), his elevated BABIP suggests regression risk, and the pitcher quality/matchup scores are unfavorable."
+      },
+      {
+        "name": "Pete Alonso",
+        "team": "BAL",
+        "opp": "NYY",
+        "pitcher": "Ryan Weathers",
+        "park": "Yankee Stadium",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "BABIP regression potential combined with platoon advantage",
+        "reasoning": "Alonso presents a challenging evaluation with his severely depressed .203 season average and cold recent form (.167 over last 7 games). However, he has clear platoon advantage against LHP Weathers and is showing significant BABIP bad luck at .238, suggesting positive regression is overdue. The pitcher matchup is manageable with Weathers' mid-tier metrics, but Alonso's current contact quality concerns and extended cold streak create substantial risk."
+      },
+      {
+        "name": "Kazuma Okamoto",
+        "team": "TOR",
+        "opp": "MIN",
+        "pitcher": "Connor Prielipp",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage as RHB facing LHP Connor Prielipp",
+        "reasoning": "Okamoto presents a borderline case with mixed signals. The platoon advantage against lefty Prielipp is meaningful, but his poor .228/.313/.430 season line and weak .216 average over the last 30 days create significant floor concerns. While his recent 7-day uptick to .250 and accelerating momentum provide some optimism, the overall body of work suggests inconsistent contact ability. Target Field's slight pitcher-friendly environment further dampens his already modest hit probability."
+      },
+      {
+        "name": "Ian Happ",
+        "team": "CHC",
+        "opp": "ARI",
+        "pitcher": "Ryne Nelson",
+        "park": "Wrigley Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Favorable pitcher matchup against struggling Ryne Nelson",
+        "reasoning": "Happ faces a struggling pitcher in Nelson (7.71 ERA) which creates opportunity, but his recent cold streak (.130 over last 7 days) and same-handed matchup without platoon advantage are concerning. His low season average (.226) and terrible recent form (-96 points below season norm) suggest he's in a genuine slump rather than just bad luck. The favorable pitcher matchup keeps this from being a complete avoid, but the momentum and contact concerns make this a borderline pick."
+      },
+      {
+        "name": "Ketel Marte",
+        "team": "ARI",
+        "opp": "CHC",
+        "pitcher": "Shota Imanaga",
+        "park": "Wrigley Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "BABIP regression potential - significantly below expected at .247 suggests unlucky outcomes",
+        "reasoning": "Marte faces a challenging matchup against quality lefty Imanaga despite having platoon advantage. His season-long struggles (.231 AVG, .247 BABIP) are concerning, though the BABIP suggests he's been unlucky and due for positive regression. Recent form shows minimal improvement, and while he bats at top of order with slight park boost, the pitcher quality and overall offensive struggles create significant risk."
+      },
+      {
+        "name": "Corbin Carroll",
+        "team": "ARI",
+        "opp": "CHC",
+        "pitcher": "Shota Imanaga",
+        "park": "Wrigley Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Recent cold streak significantly below season average",
+        "reasoning": "Carroll has decent season numbers (.282 avg) and platoon advantage against lefty Imanaga, but his ice-cold recent form (.192 over L7) is a major red flag. While facing a quality pitcher (2.88 ERA), the matchup isn't particularly favorable despite the platoon edge. His elevated BABIP suggests some regression is coming, making this a risky spot in conservative mode."
+      },
+      {
+        "name": "Byron Buxton",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Target Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Poor season-long batting average (.214) combined with no platoon advantage against quality RHP",
+        "reasoning": "Buxton faces a challenging matchup against quality RHP Dylan Cease without platoon advantage, while posting poor season-long numbers (.214 AVG, .281 BABIP). His contact quality metrics are below average (86.7 mph exit velo, 33.3% hard hit rate), and the slight park disadvantage at Target Field compounds the difficulty. While he shows minimal recent uptick and accelerating momentum, the conservative streak mode heavily penalizes this type of matchup against a skilled pitcher."
+      },
+      {
+        "name": "Trent Grisham",
+        "team": "NYY",
+        "opp": "BAL",
+        "pitcher": "Kyle Bradish",
+        "park": "Yankee Stadium",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Extreme BABIP unluckiness indicating potential positive regression",
+        "reasoning": "Grisham presents a challenging case with a dreadful .155/.320 season line and ice-cold recent form (.120 over last 7 days). However, his extreme BABIP unluckiness (.151 vs expected regression) suggests he's due for better contact outcomes. The same-handed matchup against Bradish eliminates platoon advantage, and conservative streak mode heavily penalizes this risk profile despite potential positive regression."
+      },
+      {
+        "name": "Cody Bellinger",
+        "team": "NYY",
+        "opp": "BAL",
+        "pitcher": "Kyle Bradish",
+        "park": "Yankee Stadium",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Cold recent form combined with unfavorable same-handed matchup",
+        "reasoning": "Bellinger faces a challenging spot with multiple headwinds. He's in a cold streak hitting just .185 over the last 7 days, well below his already modest .250 season average. The same-handed matchup against Bradish eliminates any platoon advantage, and his BABIP suggests he's not particularly unlucky. While Yankee Stadium provides a slight hits boost and Bradish isn't elite, the momentum and contact metrics paint a concerning picture."
+      },
+      {
+        "name": "Luke Keaschall",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Extremely poor season performance (.193 AVG) combined with worsening recent form",
+        "reasoning": "Keaschall presents multiple red flags with a dismal .193 season average and recent cold streak (.160 over last 7 days). Facing same-handed Dylan Cease (2.87 ERA) eliminates any platoon advantage, while his poor contact metrics (82.1 mph exit velocity, 26% hard hit rate) suggest limited upside. The only positive is significant BABIP regression potential (.204 vs likely true talent), but his overall quality of contact makes meaningful regression unlikely in a single game."
+      },
+      {
+        "name": "Kody Clemens",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Dylan Cease",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Extremely poor season-long performance (.130 AVG) combined with below-average contact quality",
+        "reasoning": "Clemens presents multiple red flags with a dismal .130 average and .167 BABIP indicating poor contact quality rather than just bad luck. His 31.8% hard hit rate is well below average, and he faces a quality pitcher in Cease (2.87 ERA) without platoon advantage. The BABIP regression narrative is undermined by his poor underlying contact metrics."
+      }
+    ]
   }
 ]
