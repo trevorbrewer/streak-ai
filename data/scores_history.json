@@ -14781,5 +14781,408 @@
         "reasoning": "Mullins presents a catastrophic hitting profile with a .126 season average that has deteriorated to just .050 over the last 7 days. Facing elite pitcher Landen Roupp (2.55 ERA) with no platoon advantage compounds the problem significantly. While BABIP regression (.139 vs expected) suggests some unlucky outcomes, the fundamentals are too poor to overcome in conservative streak mode."
       }
     ]
+  },
+  {
+    "date": "2026-05-03",
+    "run_at": "2026-05-03T14:48:42.605385",
+    "run_label": "manual",
+    "picks": [
+      {
+        "name": "Christian Walker",
+        "team": "HOU",
+        "opp": "BOS",
+        "pitcher": "Ranger Suarez",
+        "park": "Fenway Park",
+        "score": 78,
+        "confidence": "high",
+        "key_factor": "Hot streak momentum (+120 points above season average) combined with favorable platoon matchup",
+        "reasoning": "Walker brings excellent season fundamentals (.309/.386/.577) with strong recent momentum (.429 over last 7 days). The platoon advantage against LHP Suarez is significant, and his contact score of 73.8 provides a solid floor. Fenway's 1.08 hits factor adds modest support for contact hitters."
+      },
+      {
+        "name": "CJ Abrams",
+        "team": "WSH",
+        "opp": "MIL",
+        "pitcher": "Logan Henderson",
+        "park": "Nationals Park",
+        "score": 78,
+        "confidence": "high",
+        "key_factor": "Facing an extremely struggling pitcher with 9.00 ERA in conservative streak mode",
+        "reasoning": "Abrams presents an excellent matchup against Logan Henderson, whose 9.00 ERA signals major control/stuff issues. The pitcher quality score of 100 (worst possible) creates a highly favorable environment. Abrams is riding hot recent form at .333 over the last week with accelerating momentum, well above his solid .289 season average. His strong contact score of 62.2 and .403 OBP demonstrate consistent plate skills."
+      },
+      {
+        "name": "Willson Contreras",
+        "team": "BOS",
+        "opp": "HOU",
+        "pitcher": "Cody Bolton",
+        "park": "Fenway Park",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Hot recent form (.346 L7) against a poor pitcher (5.79 ERA, 95.8 pitcher quality score)",
+        "reasoning": "Contreras presents a solid pick with multiple favorable factors aligning. He's riding strong recent form at .346 over the last 7 days, significantly above his season average, and faces a struggling pitcher in Bolton (5.79 ERA) who rates poorly in pitcher quality. The conservative streak mode slightly caps the upside, but Fenway's slight hitter-friendly park factor and Contreras batting at the top of the order provide additional support."
+      },
+      {
+        "name": "Isaac Paredes",
+        "team": "HOU",
+        "opp": "BOS",
+        "pitcher": "Ranger Suarez",
+        "park": "Fenway Park",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Hot recent form (.393 L7) with platoon advantage vs LHP",
+        "reasoning": "Paredes presents a solid pick with multiple favorable factors aligning. His hot recent form (.393 over last 7 days) significantly above his season average creates momentum, while the platoon advantage against LHP Suarez provides a statistical edge. Fenway's slight hitter-friendly park factor (1.08) and Suarez's middling pitcher quality score (41.8) add supporting elements. The conservative streak mode benefits from his accelerating momentum and reasonable contact profile."
+      },
+      {
+        "name": "William Contreras",
+        "team": "MIL",
+        "opp": "WSH",
+        "pitcher": "PJ Poulin",
+        "park": "Nationals Park",
+        "score": 72,
+        "confidence": "medium",
+        "key_factor": "Hot recent streak (.400 L7) combined with platoon advantage vs LHP",
+        "reasoning": "Contreras presents a solid pick with multiple favorable factors aligning. His excellent season average (.308) combined with red-hot recent form (.400 over last 7 days) creates a strong foundation. The platoon advantage against LHP Poulin provides additional edge, while batting at the top of the order maximizes plate appearances. However, his slightly elevated BABIP suggests some regression risk, and the pitcher quality score indicates Poulin isn't a pushover."
+      },
+      {
+        "name": "Wilyer Abreu",
+        "team": "BOS",
+        "opp": "HOU",
+        "pitcher": "Cody Bolton",
+        "park": "Fenway Park",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Hot recent form (.346) combined with favorable pitcher matchup (Bolton's 5.79 ERA)",
+        "reasoning": "Abreu presents a solid pick with several positive factors aligning. His excellent season average (.306) and hot recent form (.346 over L7) suggest he's seeing the ball well. The matchup against Bolton (5.79 ERA) is favorable, and Fenway's park factor (1.08) provides a slight hitting boost. However, the same-handed matchup removes platoon advantage, and his elevated BABIP (.347) suggests some regression risk."
+      },
+      {
+        "name": "Brice Turang",
+        "team": "MIL",
+        "opp": "WSH",
+        "pitcher": "PJ Poulin",
+        "park": "Nationals Park",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Hot recent form (.360 L7) combined with platoon advantage vs LHP",
+        "reasoning": "Turang offers solid value with strong recent form (.360 over L7) and a meaningful platoon advantage against LHP Poulin. His high BABIP suggests some luck, but the hot streak and top-of-order position provide legitimate upside. The pitcher quality score of 62.2 indicates a manageable matchup, though not elite."
+      },
+      {
+        "name": "Ryan Vilade",
+        "team": "TB",
+        "opp": "SF",
+        "pitcher": "Tyler Mahle",
+        "park": "Tropicana Field",
+        "score": 68,
+        "confidence": "medium",
+        "key_factor": "Hot recent form (+0.078) against struggling pitcher with 5.87 ERA",
+        "reasoning": "Vilade presents a solid matchup against struggling RHP Tyler Mahle (5.87 ERA) with strong recent form (+0.078 above season average over last 7 games). His .297 season average provides a decent floor, and the pitcher quality score of 97.4 indicates a favorable matchup. However, the lack of platoon advantage (R vs RHP) and elevated BABIP suggesting potential regression temper expectations in conservative mode."
+      },
+      {
+        "name": "Carlos Correa",
+        "team": "HOU",
+        "opp": "BOS",
+        "pitcher": "Ranger Suarez",
+        "park": "Fenway Park",
+        "score": 67,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage as RHB facing LHP with strong recent momentum",
+        "reasoning": "Correa brings solid fundamentals with a .296 average and strong recent form (.333 over last 7). The platoon advantage against LHP Suarez and favorable park factor at Fenway provide meaningful edges. However, elevated BABIP suggests some luck regression risk, and Suarez is a quality pitcher with a 3.09 ERA."
+      },
+      {
+        "name": "Vladimir Guerrero Jr.",
+        "team": "TOR",
+        "opp": "MIN",
+        "pitcher": "Joe Ryan",
+        "park": "Target Field",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Strong batting fundamentals (.331 AVG) with recent positive momentum trend",
+        "reasoning": "Vladdy brings strong fundamentals with a .331 AVG and solid recent form showing slight upward momentum. However, facing a same-handed pitcher eliminates platoon advantage, and his elevated BABIP suggests some regression risk. The matchup at Target Field is neutral, and while Ryan isn't elite, he presents a competent challenge without major exploitable weaknesses."
+      },
+      {
+        "name": "Yordan Alvarez",
+        "team": "HOU",
+        "opp": "BOS",
+        "pitcher": "Ranger Suarez",
+        "park": "Fenway Park",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Strong platoon advantage (RHB vs LHP) combined with elite season-long power numbers",
+        "reasoning": "Alvarez offers a solid platoon advantage against LHP Suarez, with his exceptional season numbers (.331 BA, .685 SLG) providing a strong foundation. However, his recent cold streak (L7 at .241, 90 points below season average) creates concern about current timing. Fenway's slight hitter-friendly factor (1.08) helps offset some risk, but the momentum decline is notable."
+      },
+      {
+        "name": "James Wood",
+        "team": "WSH",
+        "opp": "MIL",
+        "pitcher": "Logan Henderson",
+        "park": "Nationals Park",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Pitcher quality score of 100 indicates facing an extremely hittable pitcher",
+        "reasoning": "Wood faces a struggling pitcher with a 9.00 ERA, creating a highly favorable matchup that significantly boosts his hit probability despite recent cold form. His strong plate discipline (0.393 OBP) and power potential (0.523 SLG) suggest quality at-bats even when struggling. The same-handed matchup and recent cold streak are concerns, but the pitcher's poor performance and Wood's skill set provide enough upside for a solid pick."
+      },
+      {
+        "name": "Jacob Young",
+        "team": "WSH",
+        "opp": "MIL",
+        "pitcher": "Logan Henderson",
+        "park": "Nationals Park",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Pitcher quality score of 100 against Logan Henderson's 9.00 ERA creates exceptional hitting opportunity",
+        "reasoning": "Young faces an extremely hittable pitcher in Henderson with a 9.00 ERA, creating a highly favorable matchup that overcomes his poor season batting average. While his .241 AVG and lack of platoon advantage are concerning, the pitcher quality score of 100 indicates Henderson is very vulnerable. His recent form is stable and momentum is accelerating, providing additional support for a hit opportunity."
+      },
+      {
+        "name": "Chandler Simpson",
+        "team": "TB",
+        "opp": "SF",
+        "pitcher": "Tyler Mahle",
+        "park": "Tropicana Field",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Favorable matchup against struggling RHP Tyler Mahle with 5.87 ERA",
+        "reasoning": "Simpson shows solid fundamentals with a .312 average and consistent recent form around .305-.308. The matchup against Mahle (5.87 ERA) is favorable despite the same-handed disadvantage, as the pitcher quality score of 97.4 indicates a hittable opponent. However, BABIP luck of +0.039 suggests some regression risk, and the pitcher-unfriendly Tropicana Field (0.94 hits factor) provides a modest headwind."
+      },
+      {
+        "name": "Casey Schmitt",
+        "team": "SF",
+        "opp": "TB",
+        "pitcher": "Steven Matz",
+        "park": "Tropicana Field",
+        "score": 62,
+        "confidence": "medium",
+        "key_factor": "Recent hot streak (+0.060 above season average) combined with platoon advantage",
+        "reasoning": "Schmitt brings solid fundamentals with a .300 average and strong recent form (.360 over last 7 days). The platoon advantage against LHP Matz is valuable, though Matz's 4.31 ERA suggests decent but not elite pitching. The BABIP regression concern (0.342 suggests some luck) and unfavorable park factor at Tropicana Field create headwinds. Conservative mode demands prioritizing floor over ceiling."
+      },
+      {
+        "name": "Heliot Ramos",
+        "team": "SF",
+        "opp": "TB",
+        "pitcher": "Steven Matz",
+        "park": "Tropicana Field",
+        "score": 58,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage as RHB vs LHP Steven Matz",
+        "reasoning": "Ramos has a clear platoon advantage against LHP Matz and sits atop the batting order, providing multiple plate appearances. However, his elevated BABIP suggests regression risk, and Tropicana Field's below-average hits environment creates headwinds. The conservative streak mode penalizes the moderate strikeout risk, keeping this in solid territory rather than strong."
+      },
+      {
+        "name": "Luis Arraez",
+        "team": "SF",
+        "opp": "TB",
+        "pitcher": "Steven Matz",
+        "park": "Tropicana Field",
+        "score": 58,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage - right-handed Arraez facing left-handed Matz",
+        "reasoning": "Arraez brings excellent contact skills (.317 AVG) and a favorable platoon matchup against LHP Matz. His consistent batting average over the last 30 days (.328) shows solid form, though recent 7-day performance has dipped slightly. The unfavorable park factor at Tropicana Field and Matz's decent quality as a pitcher create some headwinds, but Arraez's elite contact ability provides a reasonable floor."
+      },
+      {
+        "name": "Luis Garc\u00eda Jr.",
+        "team": "WSH",
+        "opp": "MIL",
+        "pitcher": "Logan Henderson",
+        "park": "Nationals Park",
+        "score": 52,
+        "confidence": "medium",
+        "key_factor": "Pitcher quality score of 100 indicates facing very hittable pitching",
+        "reasoning": "Garc\u00eda Jr. presents a borderline play with mixed signals. While facing a struggling pitcher with a 9.00 ERA creates opportunity, his poor season batting average (.238) and recent form (.217 over L7) are concerning. The same-handed matchup (RvR) eliminates platoon advantage, but his top-of-order position provides extra plate appearances. The favorable matchup score (59.3) against poor pitching quality slightly outweighs his contact struggles."
+      },
+      {
+        "name": "Roman Anthony",
+        "team": "BOS",
+        "opp": "HOU",
+        "pitcher": "Cody Bolton",
+        "park": "Fenway Park",
+        "score": 48,
+        "confidence": "medium",
+        "key_factor": "Favorable pitcher matchup against struggling Bolton with 5.79 ERA",
+        "reasoning": "Anthony faces a favorable matchup against struggling RHP Bolton (5.79 ERA, 95.8 pitcher quality score), but his own poor .233 average and lack of platoon advantage create headwinds. The slight Fenway boost (1.08 factor) and pitcher struggles provide some upside, but his BABIP luck suggests potential regression looming. His contact metrics are below average at 46.4, making him vulnerable to strikeouts in conservative mode."
+      },
+      {
+        "name": "Jake Bauers",
+        "team": "MIL",
+        "opp": "WSH",
+        "pitcher": "PJ Poulin",
+        "park": "Nationals Park",
+        "score": 48,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage (RHB vs LHP) provides the main edge in an otherwise challenging matchup",
+        "reasoning": "Jake Bauers presents a borderline case with mixed signals. His platoon advantage as a right-handed batter facing lefty Poulin is the primary positive, but his poor .243 season average and below-average contact score (49.3) create significant concerns. The pitcher quality score of 62.2 suggests a moderate challenge, while the neutral park factor provides no additional help."
+      },
+      {
+        "name": "Junior Caminero",
+        "team": "TB",
+        "opp": "SF",
+        "pitcher": "Tyler Mahle",
+        "park": "Tropicana Field",
+        "score": 48,
+        "confidence": "medium",
+        "key_factor": "Favorable pitcher matchup against struggling Tyler Mahle with 5.87 ERA",
+        "reasoning": "Caminero faces a favorable matchup against struggling RHP Tyler Mahle (5.87 ERA) at pitcher-friendly Tropicana Field. While he's in a cold streak hitting just .217 over his last 7 games, his BABIP suggests he's been unlucky and due for positive regression. The same-handed matchup against Mahle removes any platoon advantage, but Mahle's poor command creates opportunity."
+      },
+      {
+        "name": "Josh Bell",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Trey Yesavage",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with 0.00 ERA creates extremely high difficulty",
+        "reasoning": "Bell faces a challenging matchup against an elite pitcher with a 0.00 ERA, creating significant risk despite his recent hot streak. His poor contact metrics (48.2 contact score, 83.4 mph exit velocity) suggest the hot streak may be unsustainable given his elevated BABIP. The lack of platoon advantage and unfavorable park factor compound the difficulties in this spot."
+      },
+      {
+        "name": "Trevor Larnach",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Trey Yesavage",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup with no platoon advantage",
+        "reasoning": "Larnach has solid season numbers (.313 AVG) and good plate discipline, but faces significant headwinds today. The pitcher quality score of 0 with 'Elite pitcher: True' suggests Yesavage is a tough matchup despite the 0.00 ERA small sample. The same-hand matchup (R vs R) provides no platoon advantage, and his below-average contact metrics (84.6 mph exit velocity, 29.2% hard hit rate) create concern against quality pitching."
+      },
+      {
+        "name": "Austin Martin",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Trey Yesavage",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher matchup against same-handed RHP with 0.00 ERA",
+        "reasoning": "Martin shows solid season stats (.333 AVG) and recent hot form (+42 points above season average), but faces significant challenges today. The same-handed matchup against RHP Yesavage eliminates platoon advantage, and the pitcher's 0.00 ERA signals elite early performance. Martin's inflated .393 BABIP suggests he's been lucky and due for regression, while the unfavorable park factor adds another headwind."
+      },
+      {
+        "name": "Yohendrick Pinango",
+        "team": "TOR",
+        "opp": "MIN",
+        "pitcher": "Joe Ryan",
+        "park": "Target Field",
+        "score": 42,
+        "confidence": "low",
+        "key_factor": "Extremely small sample size making all batting metrics unreliable",
+        "reasoning": "Pinango shows perfect batting averages (.500) but this appears to be an extremely small sample size, making the metrics unreliable for prediction. The lack of Statcast data and facing a same-handed pitcher (no platoon advantage) creates additional uncertainty. While his contact score is perfect, the BABIP luck indicator suggests he's due for regression, and the unfavorable matchup score of 43.1 against a decent pitcher like Joe Ryan adds risk."
+      },
+      {
+        "name": "Jarren Duran",
+        "team": "BOS",
+        "opp": "HOU",
+        "pitcher": "Cody Bolton",
+        "park": "Fenway Park",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Favorable pitcher matchup against high-ERA Bolton",
+        "reasoning": "Duran faces a favorable matchup against struggling RHP Bolton (5.79 ERA) at hitter-friendly Fenway, but his severe struggles (.176 AVG, .221 BABIP) and cold recent form (.111 last 7 days) create significant concern. While he's due for BABIP regression positive and the pitcher quality is poor, his contact issues and momentum trend are deeply troubling. The conservative streak mode heavily penalizes this type of low-floor pick despite the matchup advantages."
+      },
+      {
+        "name": "Gary S\u00e1nchez",
+        "team": "MIL",
+        "opp": "WSH",
+        "pitcher": "PJ Poulin",
+        "park": "Nationals Park",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Platoon advantage against left-handed pitcher with moderate BABIP regression potential",
+        "reasoning": "S\u00e1nchez presents a borderline case with mixed signals. The platoon advantage against LHP Poulin (4.11 ERA) provides meaningful upside, and his severe BABIP underperformance (.205 vs likely true talent around .300) suggests positive regression is overdue. However, his brutal recent form (.160 over last 7 days) and season-long struggles (.209 AVG) create significant floor concerns that align with conservative streak mode priorities."
+      },
+      {
+        "name": "Jonathan Aranda",
+        "team": "TB",
+        "opp": "SF",
+        "pitcher": "Tyler Mahle",
+        "park": "Tropicana Field",
+        "score": 42,
+        "confidence": "medium",
+        "key_factor": "Favorable pitcher matchup against struggling Tyler Mahle (5.87 ERA, 97.4 pitcher quality score)",
+        "reasoning": "Aranda presents a borderline case with mixed signals. While facing a struggling pitcher (5.87 ERA) provides opportunity, his poor season average (.228) and recent cold form (.200 L7, .215 L30) are concerning. The same-handed matchup against Mahle eliminates platoon advantage, and his significantly depressed BABIP (.253 vs league average ~.300) suggests some bad luck that could regress positively. Conservative mode prioritizes floor over ceiling, making this a proceed-with-caution situation."
+      },
+      {
+        "name": "Kazuma Okamoto",
+        "team": "TOR",
+        "opp": "MIN",
+        "pitcher": "Joe Ryan",
+        "park": "Target Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "No platoon advantage facing same-handed pitcher Joe Ryan",
+        "reasoning": "Okamoto presents a challenging matchup with his .235 season average against a competent right-handed pitcher without platoon advantage. His recent form shows minimal improvement (.231 vs .235), and the negative BABIP luck (-0.026) isn't severe enough to expect significant regression. The conservative streak mode further penalizes this selection given the moderate pitcher quality and lack of clear advantages."
+      },
+      {
+        "name": "Rafael Devers",
+        "team": "SF",
+        "opp": "TB",
+        "pitcher": "Steven Matz",
+        "park": "Tropicana Field",
+        "score": 38,
+        "confidence": "medium",
+        "key_factor": "Severe offensive slump with .211 season average and deteriorating recent form",
+        "reasoning": "Devers is in a severe slump with a .211 season average and cold recent form (.167 L7). While he has a platoon advantage against LHP Matz, his contact quality is poor (37.8 score) and the Tropicana Field environment slightly suppresses hitting. The conservative streak mode heavily penalizes his current struggles despite the favorable handedness matchup."
+      },
+      {
+        "name": "Matt Wallner",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Trey Yesavage",
+        "park": "Target Field",
+        "score": 32,
+        "confidence": "medium",
+        "key_factor": "Elite pitcher debut with 0.00 ERA in unfavorable same-handed matchup",
+        "reasoning": "Wallner faces a major challenge against an elite pitcher making his debut with a 0.00 ERA. His poor season average (.224) and negative platoon split as a righty vs righty create additional headwinds. While he's shown recent improvement over 7 days (.267), his elevated BABIP suggests he's been somewhat lucky and due for regression. The combination of elite pitching and unfavorable matchup dynamics outweigh his modest recent uptick."
+      },
+      {
+        "name": "Byron Buxton",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Trey Yesavage",
+        "park": "Target Field",
+        "score": 32,
+        "confidence": "medium",
+        "key_factor": "Poor season-long batting performance (.214 AVG) combined with below-average contact quality",
+        "reasoning": "Buxton faces significant challenges today with a .214 season average and poor contact metrics (33.3% hard hit rate, 40.5 contact score). While he's batting leadoff and showing slight momentum acceleration, the platoon disadvantage against a same-handed pitcher and unfavorable park factors create additional headwinds. The conservative streak mode further penalizes this borderline situation."
+      },
+      {
+        "name": "Luke Keaschall",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Trey Yesavage",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Extremely poor recent form (.160 L7) combined with weak season-long performance (.193 AVG)",
+        "reasoning": "Keaschall presents multiple red flags that make him a poor Beat the Streak candidate. His .193 season average is already concerning, but he's gotten even colder recently at .160 over the last 7 days. The BABIP regression potential (.204 vs typical .300) offers some hope, but his weak contact quality (82.1 mph exit velocity, 26% hard hit rate) suggests the low BABIP may be deserved rather than unlucky."
+      },
+      {
+        "name": "Victor Caratini",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Trey Yesavage",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Poor recent form (.136 last 7 days) combined with below-average season performance",
+        "reasoning": "Caratini presents multiple red flags with a poor .213 season average, terrible recent form (.136 over last 7 days), and no platoon advantage against RHP. His BABIP suggests some bad luck, but the underlying contact quality is poor. Facing an unknown rookie pitcher with a 0.00 ERA adds uncertainty, and Target Field's slight pitcher-friendly nature doesn't help."
+      },
+      {
+        "name": "Jes\u00fas S\u00e1nchez",
+        "team": "TOR",
+        "opp": "MIN",
+        "pitcher": "Joe Ryan",
+        "park": "Target Field",
+        "score": 28,
+        "confidence": "high",
+        "key_factor": "Ice-cold recent form with .130 average over last 7 days",
+        "reasoning": "S\u00e1nchez presents multiple red flags that make him a poor Beat the Streak candidate. His .232 season average is already concerning, but his brutal .130 performance over the last 7 days shows he's in a deep slump. The same-handed matchup against Ryan offers no platoon advantage, and his extremely low BABIP (.241) suggests poor contact quality rather than bad luck."
+      },
+      {
+        "name": "Kody Clemens",
+        "team": "MIN",
+        "opp": "TOR",
+        "pitcher": "Trey Yesavage",
+        "park": "Target Field",
+        "score": 22,
+        "confidence": "high",
+        "key_factor": "Extremely poor season batting average (.130) combined with below-average contact metrics",
+        "reasoning": "Clemens presents multiple red flags with a dismal .130 season average and .167 BABIP indicating poor contact quality. While he's statistically due for BABIP regression upward, his 31.8% hard hit rate and 86.4 mph exit velocity suggest limited offensive upside. The same-handed matchup against a pitcher with a 0.00 ERA adds significant risk in conservative streak mode."
+      }
+    ]
   }
 ]
